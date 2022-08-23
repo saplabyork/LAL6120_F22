@@ -46,6 +46,6 @@ This site is meant to serve as a supplement to the delivered lectures and associ
 </div>
 <div class="col-sm-6">
 
-![](images/facemodel.jpg)
+![](images/Figure1.png)
 </a>
 </div>
