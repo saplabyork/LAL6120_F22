@@ -36,7 +36,7 @@ Contact: [chandann@yorku.ca](mailto:chandann@yorku.ca)\
 
 ### About
 
-This course is a rigorous introduction to key aspects of speech sciences, including acoustic phonetics, speech perception, speech production and audition, the brain and language, as well as fundamental concepts in speech-language development and disorders. The relationship between speech and abstract levels of language, such as syntax and phonology, is also considered though it is not the focus of the course. Specific topics include speech anatomy and aerodynamics, the speech chain, source-filter theory, auditory transduction, and theories of speech production and perception. The course also provides an overview of research methodologies for the analysis of speech, including instrumental techniques such as acoustic analysis with PRAAT.
+XXX
 
 ### How to use this site
 
