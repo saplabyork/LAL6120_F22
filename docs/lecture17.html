@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Building words</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link rel="shortcut icon" href="images/logo.jpeg">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">LING2200</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="lecture1.html">Lecture 1</a>
+</li>
+<li>
+  <a href="lecture2.html">Lecture 2</a>
+</li>
+<li>
+  <a href="lecture3.html">Lecture 3</a>
+</li>
+<li>
+  <a href="lecture4.html">Lecture 4</a>
+</li>
+<li>
+  <a href="lecture5.html">Lecture 5</a>
+</li>
+<li>
+  <a href="lecture6.html">Lecture 6</a>
+</li>
+<li>
+  <a href="lecture7.html">Lecture 7</a>
+</li>
+<li>
+  <a href="lecture8.html">Lecture 8</a>
+</li>
+<li>
+  <a href="lecture9.html">Lecture 9</a>
+</li>
+<li>
+  <a href="lecture10.html">Lecture 10</a>
+</li>
+<li>
+  <a href="lecture11.html">Lecture 11</a>
+</li>
+<li>
+  <a href="lecture12.html">Lecture 12</a>
+</li>
+<li>
+  <a href="lecture13.html">Lecture 13</a>
+</li>
+<li>
+  <a href="lecture14.html">Lecture 14</a>
+</li>
+<li>
+  <a href="lecture15.html">Lecture 15</a>
+</li>
+<li>
+  <a href="lecture16.html">Lecture 16</a>
+</li>
+<li>
+  <a href="lecture17.html">Lecture 17</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Building words</h1>
+
+</div>
+
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+</style>
+<hr />
+<div id="building-blocks" class="section level1">
+<h1>Building blocks</h1>
+<p>What are the basic units of speech. In LING1000 you were introduced to the notion of the “phoneme”, or the smallest unit of sound in a language which is ultimately <em>meaningful</em> in the sense that it can mark contrast. Phonological contrast is then used to distinguish meaningful utterances as words. If we were to dig deeper into the units of organization within the phoneme, we might consider the notion of a “feature” or “gesture” (articulatory movements).</p>
+<div id="gestural-score" class="section level2">
+<h2>Gestural score</h2>
+<p>If we conceptualize our phonological knowledge in terms of gestures then we can devise models of the implementation of articulatory plans over time <span class="math inline">\(\rightarrow\)</span> gestural score.</p>
+<p align="center">
+<img src="images/gestural_score.png" width="50%" height="50%">
+</p>
+<p>In the image above is a hypothetical (and very basic) gestural score for the word “spot” in English. Each gesture is conceptualized as a dimmer switch (rather than an on/off switch), that unfolds over time. The articulatory features of the score are language universal (determined by the anatomy of the vocal tract), but utilized in language-specific ways.</p>
+</div>
+<div id="features" class="section level2">
+<h2>Features</h2>
+<p>The more common way to conceptualize the building blocks of phonemes (as you’ve learned in LING1000) is by positing <strong>features</strong>. Features have some articulatory or acoustic or phonetic reality, but are really abstract units of speech that when combined with each other give use the contrastive phoneme. Below are some examples of phonological features:</p>
+<p>[labial] – Involving the lips<br />
+[coronal] – Involving the tongue tip or blade<br />
+[dorsal] – Involving the tongue body/rear<br />
+[nasal] – Involving velum lowering<br />
+[continuant] – Not full closure<br />
+[consonantal] – Not a vowel<br />
+[voice] – Vocal fold vibration for normal voicing<br />
+[high] – Low F1<br />
+[back] – Small distance between F1 and F2<br />
+</p>
+</div>
+</div>
+<div id="evidence-for-features" class="section level1">
+<h1>Evidence for features</h1>
+<p>How do we know that features are real and have a pyshchological reality for the speaker and ultimately encoded in languages? One way we can see how features function in languages is by looking at universal (or near-universal) tendencies in language patterns. For example, co-occurrence restrictions in English there is a restriction on words of the shape sCVC such that both Cs cannot involve the same constriction.</p>
+<p>So we have words like “snip”, but not <em>snim, </em>snom, <em>smung, etc. or it has “spot,” but not </em>spob, <em>smaf (But what about “spiffy”?) English has “Scott,” but not </em>scock, *skong, etc. [But what about “skunk”].</p>
+<p>Phonological processes like <em>assimilation</em> also reveal the necessity of featural units for explanation. Assimiliation patterns in languages result in phonemes becoming more similar to neighboring sounds in terms of some phonetic property. Often the assimilation at the speaker level is so prevalent that it becomes encoded in the lexicon (and consequently spelling). For example, the Latinate prefix, <em>in-</em> (meaning “not”) in English changes according to the place of articulation of the following consonant:<br />
+<em>in-</em>possible <span class="math inline">\(\rightarrow\)</span> impossible<br />
+<em>in-</em>perfect <span class="math inline">\(\rightarrow\)</span> imperfect, etc.<br />
+<em>in-</em>congruent <span class="math inline">\(\rightarrow\)</span> i[ŋ]congruent<br />
+In order to describe this sort of variation we must appeal to a feature that takes on the characteristics of the initial sound of the adjective, in this case, a place-of-articulation feature, like [labial] or [velar].</p>
+</div>
+<div id="syllables" class="section level1">
+<h1>Syllables</h1>
+<p>A larger unit of linguistic structure composed of organized gestures and segments (collections of features) is the syllable, which is generally at its bare minimum a vowel. The structure of the syllable can be filled out by one or more consonants either before or after the vowel. We can think of the syllable as giving the rhythm of a word, an organizational timing structure <span class="math inline">\(\rightarrow\)</span> it’s the “clapping” unit around which we time our utterance. <em>Every word</em> in a language consists of at least one syllable, or one unit of time. People almost always agree on how many syllables a word contains, but linguists and phoneticians have a hard time really defining its acoustic properties. What is the phonetic value of the syllable? We know that the mandatory ingredient, the vowel, is loud and made up of periodic acoustic energy. A good approximation of what the acoustic properties of the syllable are would be a rise in energy (from the consonant) into the vowel, and it turns out that when we look at real speech, if we look for loud parts in the signal they correspond with vowels and thereby the psychological perception of the syllable.</p>
+<p>What evidence do we have for syllables? Well, we can look at common processes that are found across the world’s languages that rely on some notion of the syllable. A common phonological process that takes advantage of the syllable is reduplication, which refers to the repetition of a whole word or some part of a word in the formation of a related word. Unfortunately English does not exhibit a very productive application of reduplication, when it does so, it’s either as a clarification or as an intensifier:<br />
+In your coffee do you want soy-milk or <em>milk-milk</em>?<br />
+Do you like her or do you <em>like-like</em> her?\</p>
+<div id="syllable-structure" class="section level2">
+<h2>Syllable structure</h2>
+<p>Now that we can agree that syllables are <em>real</em> at some level, what are they composed of? We mentioned that syllables minimally are a vowel, which is loud and periodic, but what else? We can organize the syllable into one obligatory part (the <strong>nucleus</strong> which is generally a vowel, but can also be a consonant), and two optional parts, the <strong>coda</strong> and the <strong>onset</strong>, which are consonants.</p>
+<p><strong>Nucleus</strong>: usually the vowel in the syllable, though there are some consonants that can fulfill this role (which ever consonant has the most open vocal tract configuration if no vowel present)<br />
+<strong>Onset</strong>: consonants before the nucleus  <strong>Coda</strong>: consonants after the vowel/nucleus  <strong>Rhyme</strong>: nucleus + coda</p>
+<p align="center">
+<img src="images/syllable.png" width="40%" height="40%">
+</p>
+</div>
+<div id="assigning-syllable-structure" class="section level2">
+<h2>Assigning syllable structure</h2>
+<p>Across the world’s languages there is a preference for how consonants pattern syllabically. Consonants prefer to syllabify with the later syllable as onsets <span class="math inline">\(\rightarrow\)</span> so long as <strong>the language permits words to begin with those particular segments</strong></p>
+<p>So in a word like “grandpa”, which we know consists of two syllables, the first syllable is structured such that its coda is complex with -nd.</p>
+<p align="center">
+<img src="images/syllabification.png" width="50%" height="50%">
+</p>
+<p>In order to state that languages of all different sorts have these patterns or preferences, then a subsyllabic unit like onsets and codas must be relevant to the language’s structure.</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>General auditory perception</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link rel="shortcut icon" href="images/logo.jpeg">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">LING2200</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="lecture1.html">Lecture 1</a>
+</li>
+<li>
+  <a href="lecture2.html">Lecture 2</a>
+</li>
+<li>
+  <a href="lecture3.html">Lecture 3</a>
+</li>
+<li>
+  <a href="lecture4.html">Lecture 4</a>
+</li>
+<li>
+  <a href="lecture5.html">Lecture 5</a>
+</li>
+<li>
+  <a href="lecture6.html">Lecture 6</a>
+</li>
+<li>
+  <a href="lecture7.html">Lecture 7</a>
+</li>
+<li>
+  <a href="lecture8.html">Lecture 8</a>
+</li>
+<li>
+  <a href="lecture9.html">Lecture 9</a>
+</li>
+<li>
+  <a href="lecture10.html">Lecture 10</a>
+</li>
+<li>
+  <a href="lecture11.html">Lecture 11</a>
+</li>
+<li>
+  <a href="lecture12.html">Lecture 12</a>
+</li>
+<li>
+  <a href="lecture13.html">Lecture 13</a>
+</li>
+<li>
+  <a href="lecture14.html">Lecture 14</a>
+</li>
+<li>
+  <a href="lecture15.html">Lecture 15</a>
+</li>
+<li>
+  <a href="lecture16.html">Lecture 16</a>
+</li>
+<li>
+  <a href="lecture17.html">Lecture 17</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">General auditory perception</h1>
+
+</div>
+
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+</style>
+<table>
+<tbody>
+<tr class="odd">
+<td>So far we’ve been discussing <em>physical</em> phenomena associated with speech and hearing: acoustics, anatomy, respiration, and audition. What happens after the hair cells embedded in the Organ of Corti are fired at different frequencies and the electrical impulse is sent to the brain via the auditory nerve?</td>
+</tr>
+</tbody>
+</table>
+<div id="problems-of-speech-perception" class="section level1">
+<h1>Problems of speech perception</h1>
+<p>The previous lectures described the physical aspects of speech <em>hearing</em>. Once the brain is involved, it becomes difficult to separate the low-level hearing from higher-level <em>perception</em>. (Low-level <span class="math inline">\(\rightarrow\)</span> relates to the translation of physical features of the sound; High-level <span class="math inline">\(\rightarrow\)</span> affected by factors including, and beyond the physical features of the sound, like the nature of your own language.)</p>
+<p>The brain takes the various physical features of speech (like the duration, the formant structure, etc.) and <em>processes</em> the sound more or less holistically (i.e., as a whole), thereby assigning values such as “phoneme”, or “syllable”, or “word” to the sound. Speech perception suffers from two fundamental problems that have animated the field for about 70 years.</p>
+<div id="lack-of-invariance" class="section level2">
+<h2>Lack of invariance</h2>
+<p>The first problem of speech perception, the “lack of invariance”, reveals that there is no one-to-one correspondence between the speech signal and the percept. Here’s an example, examine the two spectrograms below. The spectrogram on the left is the word “key” and on the left “coo,” both of which begin with the sound /k/, <a href="sounds/ki.wav">left sound</a> and <a href="sounds/ku.wav">right sound</a>.</p>
+<p align="center">
+<img src="images/keycoo.png" width="60%%" height="60%">
+</p>
+<p>The arrows point to the broad band noise associates with the aspiration in a stop consonant at the beginning of a syllable. This is essentially what we hear when we hear a /k/, but if you examine the spretrograms, where is the /k/? It looks different in both the images, yet we perceive them both as a /k/. This is the lack of invariance problem, or put another way, speech sounds are characterized by variance.</p>
+</div>
+<div id="segmentation-problem" class="section level2">
+<h2>Segmentation problem</h2>
+<p>The second problem of speech perception is broadly related to the first, and relates to the fact that the speech stream does not come chunked into smaller units like words, syllables, phonemes. Despite the lack of separation, we can recover the chunks effortlessly. Consider the acoustic waveform of this sentence, displayed below.</p>
+<p align="center">
+<img src="images/consider.png" width="60%%" height="60%">
+</p>
+<p>The words run into each other and a casual examination of the resulting waveform reveals that it’s very difficult to determine where one sound or word ends and the other ends. How do we nonetheless perceive different words and different syllables and phonemes? <strong>Coarticulation</strong> is inherent in the signal as speakers optimize their speech to provide the listener as much information as possible in a given time while minimizing how much their articulators have to move.</p>
+</div>
+<div id="solutions" class="section level2">
+<h2>Solutions?</h2>
+<p>Some theorists suggst that we’re not looking hard enough when we say there is a lack of invariance or that speech is highly coarticulated and therefore no “essential” features of the phoneme can be recovered. For example, in our “key coo” example above, the structure of the vowel formants <em>after</em> the “k” tell us about the consonant. They show up in a pattern such that F2 and F3 are close together. The structure of the formants immediately after the release of the consonant tell us about its place of articulation. Linguists have recovered something called <a href="https://link.springer.com/article/10.3758/BF03205495">“locus equations”</a> that pin point the placement and direction of vowel formant movements that capture various consonants.</p>
+<p>Others look to the dynamic variability itself, combined with contextual information (like the surrounding sounds, the nature of the word, the speed at which it’s uttered, etc.) is essentially what we decode when we perceive speech. In reality, it’s likely that listeners use any and all available strategies to recover the lingusitic message encoded in speech.</p>
+</div>
+</div>
+<div id="vowel-perception" class="section level1">
+<h1>Vowel perception</h1>
+<p>We hinted earlier as to the role of <em>formants</em> in communicating the quality of a vowel, essentially revealing the sizes of the oral and pharyngeal cavities, which affect F1 and F2. Listeners can categorize a vowel sound with basically these two formants. Vowels are generally more intense than consonants <span class="math inline">\(\rightarrow\)</span> it’s really what we end up hearing when we listen to speech. The consonants are chaped by the vowels.</p>
+<p>But there is a problem: formant values overlap, considerably, so two different vowels might have very similar formants (F1 and F2). Consider the image below, which shows the formant values for various vowels from English as spoken by men, women, and children (the data are from the famous vowel survey of Peterson and Barney (1952)). ** Practice your vowel here: <a href="https://web.uvic.ca/ling/resources/ipa/charts/IPAlab/IPAlab.htm">https://web.uvic.ca/ling/resources/ipa/charts/IPAlab/IPAlab.htm</a> **</p>
+<p align="center">
+<img src="images/PB.png" width="60%%" height="60%">
+</p>
+<p>Given the situation in the picture above, how would a listener perceive a vowel whose F1 and F2 overlaps with other vowels? One solution to the this problem suggests that absolute F1 and F2 measures don’t matter too much, but rather what’s important is the relationship between F1 and F2 (and F3). So each production of /i/ generally has a low F1 and a very high F2 and F3, regardless of who’s speaking. A somewhat similar theory suggests that the ratio of F2:F1 is what is important for vowel perception.</p>
+<p align="center">
+<img src="images/vowel_ratio.png" width="60%%" height="60%">
+</p>
+<p>In the vowel ratio table above, each vowel has very similar F2:F1 ratios regardless of who is saying it, men (M), women (W), or children (C). Perhaps this number is recovered by the perceptual system in the brain when identifying vowels.</p>
+<div id="target-undershoot" class="section level2">
+<h2>Target undershoot</h2>
+<p>Related to the segmentation problem is the problem of <strong>target undershoot</strong>. The acoustic contrasts between vowels is reduced as a result of coarticulation. When speech gestures overlap, the result is that articulatory “targets” or ideal positions of the tongue, etc., may not be reached. Formant frequencies not reaching their targets results in the vowel becoming more “centralized” or more like schwa.</p>
+<p align="center">
+<img src="images/vowel_quad.png" width="40%%" height="40%">
+</p>
+<p>Some speakers have more undershoot than others. It may not really matter, however, because it turns out that listeners are really good at recovering vowel information even if there’s no information there! In a series of experiments with “silent centers”, or syllables with the middle portion of thevowel removed, listeners were able to identify the syllable solely by hearing the onsets and the offsets of the syllable. Listen to these two sounds:<a href="sounds/deed.wav">1</a>, <a href="sounds/dude.wav">2</a>. One is “dude”, the other is “deed”. Which is which?</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

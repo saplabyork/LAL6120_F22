@@ -1,0 +1,16 @@
+% Set font size
+\usepackage[fontsize=12pt]{scrextend}
+
+% Set font family
+\usepackage{xeCJK}
+\usepackage{fontspec}
+
+\setmainfont{Calibri}
+
+\setCJKmainfont[
+    BoldFont={HanWangHeiHeavy}
+    ]{HanWangHeiLight}
+
+% IPA font
+\newfontfamily\ipa{Doulos SIL}
+\DeclareTextFontCommand{\ipatext}{\ipa}

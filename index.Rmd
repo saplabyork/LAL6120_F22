@@ -1,0 +1,51 @@
+---
+title: "LING 2200"
+output: 
+  html_document:
+    includes:
+      in_header: "favicon.html"
+    theme: paper
+---
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+</style>
+
+<style type="text/css">
+.title {
+  display: none;
+}
+
+#getting-started img {
+  margin-right: 10px;
+}
+
+</style>
+
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-6">
+
+# **Introduction to Speech and Language Sciences**
+
+Tuesdays & Thursdays, 11:30-1pm\
+[Stong College](https://www.yorku.ca/colleges/stong/), Rm. 216\
+Instructor: [Chandan Narayan](https://ch-narayan.github.io)\
+Contact: [chandann@yorku.ca](mailto:chandann@yorku.ca)\
+[Course outline and schedule](LING2200syllabus.html)
+
+### About
+
+This course is a rigorous introduction to key aspects of speech sciences, including acoustic phonetics, speech perception, speech production and audition, the brain and language, as well as fundamental concepts in speech-language development and disorders. The relationship between speech and abstract levels of language, such as syntax and phonology, is also considered though it is not the focus of the course. Specific topics include speech anatomy and aerodynamics, the speech chain, source-filter theory, auditory transduction, and theories of speech production and perception. The course also provides an overview of research methodologies for the analysis of speech, including instrumental techniques such as acoustic analysis with PRAAT.
+
+### How to use this site
+
+This site is meant to serve as a supplement to the delivered lectures and associated slides posted on [eClass](https://eclass.yorku.ca). The notes will give a bit more detail than the slides, as well as some practice problems of the type you might encounter on quizzes and exams. 
+
+
+</div>
+<div class="col-sm-6">
+
+![](images/facemodel.jpg)
+</a>
+</div>

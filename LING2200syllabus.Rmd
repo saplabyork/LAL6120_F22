@@ -1,0 +1,127 @@
+---
+title: "LING2200syllabus"
+output: 
+  html_document:
+    theme: paper
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+</style>
+
+<style type="text/css">
+.title {
+  display: none;
+}
+
+#getting-started img {
+  margin-right: 10px;
+}
+
+</style>
+
+# **LING 2200: Introduction to Speech and Language Sciences**\
+Instructor: [Chandan Narayan](https://ch-narayan.github.io)\
+Office hours: Tuesdays and Thursdays 10-11am [Zoom link](https://yorku.zoom.us/j/97755816919?pwd=L1krNjJlUm9TL2RWWE1HWnZwNXZLQT09)\
+
+## Course Outline and Schedule
+
+***
+
+## Course description:
+This course is a rigorous introduction to key aspects of speech sciences, including acoustic phonetics, speech perception, speech production and audition, the brain and language, as well as fundamental concepts in speech-language development and disorders. The relationship between speech and abstract levels of language, such as syntax and phonology, is also considered though it is not the focus of the course. Specific topics include speech anatomy and aerodynamics, the speech chain, source-filter theory, auditory transduction, and theories of speech production and perception. The course also provides an overview of research methodologies for the analysis of speech, including instrumental techniques such as acoustic analysis with PRAAT.
+
+## Course prerequisites:
+LING 1000 and PSYC 1010. This class is predicated on your knowing some fundamental concepts in Linguistics and/or Psychology. Therefore, you must have all the prerequisite courses in order to take this class. Special exceptions are made on a case-by-case basis.
+
+## Learning outcomes:
+
+1. Demonstrate knowledge of the mechanics and physics of speech production and theories of perception
+2. Demonstrate knowledge of the concepts and methods used in the qualitative analysis of speech sounds
+3. Demonstrate knowledge of speech anatomy
+4. Demonstrate elementary knowledge of speech-language development and disorders
+
+## Evaluation
+
+Your grade in the course will be determined by your performance on the following:
+
+* 30% Assignments (3 x 10% each)
+* 15% Quizzes (3 x 5% each)
+* 20% Midterm Test
+* 30% Final Exam
+* 5% Class participation
+
+## Course text and readings
+Although you are responsible for readings from the following textbook:
+
+> Ferrand, C. (2018) Speech Science: An Integrated Approach to Theory and Clinical Practice. (Pearson)
+
+my goal is to make as much information available via [lecture notes]("docs/index.html") so as to minimize the use of the textbook. Lastly, the lecture notes will be quite comprehensive. If I do not discuss a concept in lecture, it is likely that it won’t appear in a quiz or exam. Some readings will come from outside the textbook as well. These additional readings will be made available via pdf on the course website.
+
+## eClass
+All lectures (videos), lecture slides, assignments, discussion boards, online Quizzes and Tests, and assignment submission will happen on the [eClass](http://eclass.yorku.ca) site for the course. Lecture slides will be posted the evening after the lecture happens.
+
+### Lecture notes
+Every lecture will be accompanied by [notes]("docs/index.html"). These notes go into a bit more detail than offered by the slides. The notes will also provide you with animations, videos, demos, etc., which can bring the materials to life. The notes will also have quiz modules (ungraded) which allow you to test your knowledge.
+
+### Class structure
+For the first two weeks of the Winter 2022 semester the course will be delivered synchronously via Zoom. We will go over the day's lecture and discuss issues and problems. For the most part, the topics discussed each week will follow closely the order of material presented in the textbook, with additional readings discussed in conjunction with the theme of the textbook chapter. It is critical that you do the readings as they will surely illuminate what is discussed in the lecture. Additionally, I ask that you forward me any interesting news stories related to language which you might come across. It is always nice to keep lectures and class content current with the zeitgeist.
+
+### Email policy
+If you cannot attend the scheduled office hour, contact me to arrange another time. I will do my best to answer your phone and email messages promptly. I do not, generally, answer email on the weekend. Please email me from your yorku.ca account and put ‘LING 2200’ in the subject line. Emails sent from non-York accounts will be ignored. Please sign your emails; I will not reply to anonymous messages. My response to your email may be brief and may not come within 48 hours. **Please be patient**.
+
+### Assignments
+The course will have three homework assignments, which should be submitted on the date it is due via the eClass submission module. The assignments are designed to allow you to become familiar with core concepts, problems, and research methods/approaches (i.e., Praat) that are critically important in speech science.
+
+### Quizzes
+There will be three quizzes over the course of the term. Quizzes will be on Thursdays and during the first 15 minutes of the class period. Be on time! Each quiz will cover material from the previous two weeks of class. **There will be no make-up quizzes**.
+
+## Tests
+There will be two tests in this course, one at Midterm and one Final Exam. The tests will be mostly multiple-choice with some possible short answer questions testing your knowledge of both book and lecture content. You are responsible for reading all assigned material (book chapters and additional readings) as well as anything that may be presented in lectures. In the event that quizzes or tests occur on days when course delivery is online, they will essentially be “open book.” There is really no way to avoid this. As a result, tests and quizzes will be difficult and test more of the application of concepts than straight definitions or formulas.
+
+### Missed Midterm
+If you provide appropriate documentation for missing the midterm you will have until the following Tuesday to take a make-up. Please coordinate the make-up with me. A midterm missed without adequate documentation will be assigned a mark of zero.
+
+## Grading
+York University uses a grading system detailed [here](http://calendars.registrar.yorku.ca/2012-2013/academic/grades/). Please familiarize yourself with it. 
+
+## Academic Honesty and Integrity
+York students are required to maintain high standards of academic integrity and are subject to the Senate Policy on Academic Honesty. Please review the documents available [here](https://www.yorku.ca/secretariat/policies/policies/academic-honesty-senate-policy-on/). Academic offences are treated very seriously, and the disciplinary procedures are described there as well. Please consult the code if you have any question about the nature of academic offences and their penalties.
+
+## Course Withdrawal (W) option
+In the period between the last day to drop a course without receiving a grade and the final day of classes in a term, undergraduate students are permitted to withdraw from a course with the condition that the course enrolment remains on a student’s transcript, denoted by a “W” in the University’s records and on the student’s transcript as the grade decision. No credit value will be retained for the course and no value will be included in the calculation of a student's grade point average (GPA). Please go [here](https://calendars.students.yorku.ca/2021-2022/withdrawal) for details.
+
+## Schedule
+
+| Week | Date | Lecture | Topic                               | Reading | Tests/Due    |
+|------|------|---------|-------------------------------------|---------|--------------|
+| 1    | 1/11 | 1       | Nature of Sound                     | Ch.1    |              |
+|      | 1/13 | 2       | Pure and complex sounds             | Ch.1    |              |
+| 2    | 1/18 | 3       | Attributes of sound                 | Ch.1    |              |
+|      | 1/20 | 4       | Praat basics (Lab 1)                | Ch.1    |  Quiz 1      |
+| 3    | 1/25 | 5       | Acoustic resonance                  | Ch.2    | Assignment 1 |
+|      | 1/27 | 6       | Respiration                         | Ch.3    |              |
+| 4    | 2/1  | 7       | Laryngeal bones and muscles         | Ch.4    |              |
+|      | 2/3  | 8       | Voice quality; Review               | Ch.4    |              |
+| 5    | 2/8  |         | **Midterm**                         |         |              |
+|      | 2/10 | 9       | Articulation and resonance          | Chs.6,7 |              |
+| 6    | 2/15 | 10      | Audition: Ear anatomy               | Ch.8    |              |
+|      | 2/17 | 11      | General auditory perception         | Ch.8    |              |
+| 7    |      |         | **Reading week (no class)**         |         |              |
+| 8    | 3/1  | 12      | Spectrogram lab                     | Ch.8,6  |   Quiz 2     |
+|      | 3/3  | 13      | Consonant perception                | Ch.6    |              |
+| 9    | 3/8  | 14      | Hearing loss and speech perception  | Ch.9    | Assignment 2 |
+|      | 3/10 | 15      | Motor control and speech production | Ch.12   |              |
+| 10   | 3/15 | 16      | Speech perception theories          | Ch.12   |              |
+|      | 3/17 | 17      | Building words                      |         |              |
+| 11   | 3/22 | 18      | Parts of words                      |         | Quiz 3       |
+|      | 3/24 | 19      | ~~Organization above speech~~       |         | Assignment 3 |
+| 12   | 3/29 | 20      | Review 1                            |         |              |
+|      | 3/31 | 21      | Review 2                            |         |              |
+|      |      |         |                                     |         |              |

@@ -1,0 +1,60 @@
+
+#This is a generic radio-button quiz question that you can insert into your rmd.
+
+<!-- Answer options go here -->
+<div class="radio">
+  <label>
+    <input type="radio" name="question01" id="opt1" value="33kHz" onchange="check_answer()">
+    33kHz 
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="question01" id="opt2" value="300Hz" onclick="check_answer()">
+    300Hz
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="question01" id="opt3" value="333kHz" onclick="check_answer()">
+    333kHz 
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="question01" id="opt3" value="333Hz" onclick="check_answer()">
+    333Hz 
+  </label>
+</div>
+<!-- Check answer button -->
+<div>
+<button class="btn btn-primary" type="button" onclick="check_answer()" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Show / Hide result</button>
+</div>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body" id="answerFeedback">
+    The answer selected was ...
+  </div>
+</div>
+
+<!-- Code to update answer feedback -->
+<script type="text/javascript">
+function check_answer()
+{
+    var radioButtons = document.getElementsByName("question01");
+    document.getElementById("answerFeedback").innerHTML = "Try selecting an answer!!";
+    for(var i = 0; i < radioButtons.length; i++)
+    {
+        if(radioButtons[i].checked == true)
+        {
+            var selectedAnswer = "Your selected answer was " + radioButtons[i].value;
+            <!-- feedback for correct / incorrect response -->
+            var feedback = "Not quite! Have another go." 
+            if(radioButtons[i].value == "333Hz") {
+              feedback = "Yup, good job! 1/0.003 = 333"
+            }
+            document.getElementById("answerFeedback").innerHTML = selectedAnswer + "<br>" + feedback;
+            return true;
+        }
+    }
+}
+</script>

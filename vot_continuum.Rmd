@@ -1,0 +1,27 @@
+---
+title: "VOT continuum"
+author: "Chandan Narayan"
+date: "02/03/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. [-70ms](sounds/step01_-70ms.wav)
+2. [-60ms](sounds/step02_-60ms.wav)
+3. [-50ms](sounds/step03_-50ms.wav)
+4. [-40ms](sounds/step04_-40ms.wav)
+5. [-30ms](sounds/step05_-30ms.wav)
+6. [-20ms](sounds/step06_-20ms.wav)
+7. [-10ms](sounds/step07_-10ms.wav)
+8. [0ms](sounds/step08_0ms.wav)
+9. [10ms](sounds/step09_10ms.wav)
+10. [20ms](sounds/step10_20ms.wav)
+11. [30ms](sounds/step11_30ms.wav)
+12. [40ms](sounds/step12_40ms.wav)
+13. [50ms](sounds/step13_50ms.wav)
+14. [60ms](sounds/step14_60ms.wav)
+15. [70ms](sounds/step15_70ms.wav)
+16. [80ms](sounds/step16_80ms.wav)

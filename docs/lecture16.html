@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Models and theories of perception</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link rel="shortcut icon" href="images/logo.jpeg">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">LING2200</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="lecture1.html">Lecture 1</a>
+</li>
+<li>
+  <a href="lecture2.html">Lecture 2</a>
+</li>
+<li>
+  <a href="lecture3.html">Lecture 3</a>
+</li>
+<li>
+  <a href="lecture4.html">Lecture 4</a>
+</li>
+<li>
+  <a href="lecture5.html">Lecture 5</a>
+</li>
+<li>
+  <a href="lecture6.html">Lecture 6</a>
+</li>
+<li>
+  <a href="lecture7.html">Lecture 7</a>
+</li>
+<li>
+  <a href="lecture8.html">Lecture 8</a>
+</li>
+<li>
+  <a href="lecture9.html">Lecture 9</a>
+</li>
+<li>
+  <a href="lecture10.html">Lecture 10</a>
+</li>
+<li>
+  <a href="lecture11.html">Lecture 11</a>
+</li>
+<li>
+  <a href="lecture12.html">Lecture 12</a>
+</li>
+<li>
+  <a href="lecture13.html">Lecture 13</a>
+</li>
+<li>
+  <a href="lecture14.html">Lecture 14</a>
+</li>
+<li>
+  <a href="lecture15.html">Lecture 15</a>
+</li>
+<li>
+  <a href="lecture16.html">Lecture 16</a>
+</li>
+<li>
+  <a href="lecture17.html">Lecture 17</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Models and theories of perception</h1>
+
+</div>
+
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+</style>
+<hr />
+<div id="speech-perception" class="section level1">
+<h1>Speech perception</h1>
+<p>Speech perception refers to the ability to receive and interpret (as linguistically relevant) incoming speech. The ability is allows us to decompose speech into component parts, combining them, classifying them, and ultimately utilizing them in order to inform a decision like “is this a”pa" or not?" or “what is this word?”.</p>
+<p>At its core, speech perception depends on our ability to recognize speech sounds (phones, syllables, words, etc.) and translate them into linguistic knowledge <span class="math inline">\(\rightarrow\)</span> phonology, syntax, semantics. That is, listeners take a continuously changing signal and transform it into meaningful units. How do listeners do this? They use any and all information available in the speech signal, capitalizing on redundant acoustic cues, as well as the knowledge they have gained through experience. Experience with language ultimately shapes how the listener hears speech information. Our experience as English speakers shapes the way we hear speech, allowing us to focus on those aspects of the signal that are important for English, while ignoring irrelevant information.</p>
+<div id="categorical-speech-perception" class="section level2">
+<h2>Categorical speech perception</h2>
+<p>We have discussed categorical speech perception in previous lectures but haven’t discussed the mechanisms that underly the phenomenon. The data reduction involved in speech perception is a function of the nature of the acoustic signal as well as the listener’s experience (or native language). It’s a very good thing that we perceive speech categorically otherwise we would be flooded with unnecessary information (e.g., the differences between multiple talkers saying the same thing, or even within an individual saying the same thing but with physically different utterances).</p>
+<div id="native-language-magnet" class="section level3">
+<h3>Native language magnet</h3>
+<p>But <em>how</em> does categorical speech perception happen? One proposal, the <strong>Perceptual Magnet effect</strong>, suggests that with experience with the speech world, we create <em>prototypes</em> of sounds against which we assess incoming speech. The prototype serves as a magnet, attracting nearby sounds towards it, thereby making discrimination between the prototype and the non-prototype very poor (i.e., essentially no difference between the two). In the image below we see two prototypes, one for /i/ (as in “heat”) and /y/, or the high-frount rounded vowel (as in the French word “tu”, meaning <em>you</em>).</p>
+<p align="center">
+<img src="images/pme.jpeg" width="50%" height="50%">
+</p>
+<p>Speech tokens that are close to the prototypes are essentially not different from the prototype itself. Notice how good instances of /y/ are bad instances of /i/. In this way, the mechanism behind categorical perception is rooted in the establishment of a prototype. The theory that encapsulates the perceptual magnet effect is called the <strong>Native Language Magnet</strong> theory.</p>
+<p>But how do we get the prototype? In the studies by <a href="https://www.pnas.org/doi/10.1073/pnas.97.22.11850">Pat Kuhl</a>, who developed the theory behind the perceptual magnet effect, prototypes were identified by surveying people on what they thought were “good” and “less good” examples of a particular vowel. Importantly, these prototypes need not reflect actual instances of real productions, but rather idealized versions of the sound.</p>
+</div>
+<div id="acoustic-invariance-theories" class="section level3">
+<h3>Acoustic invariance theories</h3>
+<p>Recall the <a href="lecture11.html"><em>problems of speech perception</em></a> discussed a few weeks ago, one of which was the <em>lack of invariance</em>, which suggested that the reason why understanding the process of speech perception is so hard is because there isn’t a one-to-one correspondence between the an acoustic signature and a phonetic percept. That is, there is no one defining acoustic feature of a phone (because of things like contextual effects like coarticulation). <strong>Acoustic invariance</strong> theories (it’s really a class of theories and not a singular theory) appeal to this underlying concern but argue that <em>there is</em> invariance in the acoustic signal! There may be some evidence for this as we decompose the speech signal into finer and finer components. The reason why variance in the signal was such a problem was because we weren’t looking hard enough to find the invariance. Some examples of this invariance: burst spectra for place of articulation in stop consonants <span class="math inline">\(\rightarrow\)</span> bilabials having diffuse/falling spectrum; alveolars a rising spectrum; velars a compact spectrum.</p>
+</div>
+<div id="motor-theory" class="section level3">
+<h3>Motor Theory</h3>
+<p>The <strong>Motor Theory</strong> of speech perception is perhaps the most famous of the invariance theories. It centers the “object” of speech perception as the production mechanism that implements the speech motor command. The theory follows from an idea that perception and production are intimately linked. When the listener hears a sound, she recovers (via the acoustic image) the articulatory gesture involved in producing the gesture. She does this because she has an intimate understanding (as a user of language) what articulatory configurations result in which acoustics. The motor theory relies on the philosophy that “speech is special” and that “humans are wired for speech” and therefore have this unique ability to perceive these objects of speech. In the late 1970s, it was demonstrated that some animals too (like Japanese quail for example) can also perceive speech categorically. The original motor theorists adjusted their theory to suggest that it wasn’t the gestures themselves that individuals were perceiving, but rather the neuromuscular commands.</p>
+<p>There is some evidence for the link between perception and production in the discovery of a class of neurons in the brain called <a href="https://www.pbslearningmedia.org/resource/hew06.sci.life.reg.mirrorneurons/mirror-neurons/#.XcxFlChKg2w"><strong>mirror neurons</strong></a>, which fire when engaged in an activity as well as when observing an activity. It turns out that the motor cortex, including portions of Broca’s area, show mirror system properties. Areas involved in planning and execution of gestures and areas involved in proprioception related to mouth movements (i.e., somatosensory cortex) are activated during auditory and visual speech perception. In fact, recent studies have shown that when regions in the brain responsible for certain motor movements (e.g., lip movements) are stimulated, recognition of labial sounds is faster.</p>
+</div>
+<div id="direct-realism" class="section level3">
+<h3>Direct Realism</h3>
+<p>Direct realism builds upon a theory of perception from the visual domain, and suggests we perceive objects and events directly (as a result of experience) rather than reconstructing or interpreting them from the sensory input to the brain. The events in the case of speech perception would be the acoustic signal, rather than the gestures that result in the acoustic signal. This is analogized in the visual domain <span class="math inline">\(\rightarrow\)</span> one sees a candy bar in its wrapper and knows exactly what it is, its weight, its texture, etc., even if occluded by another object, because they have experienced that candy bar before. This would be a different perception than for someone who has never encountered this candy bar before, as the same visual structure will be <em>seen</em> but perceived in a different way.</p>
+</div>
+<div id="trace" class="section level3">
+<h3>TRACE</h3>
+<p>Connectionist models of production and perception are rooted in an understanding of the neural implementation of the processing and execution of behaviours. This is a fancy way of saying that the models resemble how researchers believe networks of neurons in the brain operate, that is, in a parallel but hierarchical way. Lower layers are stimulated by an incoming signal, activating features in that level, which in turn activate features in higher levels until a sound (or word) is recognized. The <strong>TRACE</strong> models is a connectionist model.</p>
+<p>The layers or networks of units are the different levels of abstraction. The image below shows a basic TRACE model:</p>
+<p align="center">
+<img src="images/trace.jpeg" width="80%" height="80%">
+</p>
+<p>The Features layer analyzes the incoming speech signal and activates nodes across itme according to various acoustic characteristics. When a node is sufficiently activated (these will have thresholds such that a certain amount of evidence must be present for the node to feed higher-level information), it activates a node above it in a higher layer. Likewise, as nodes in the Phoneme layer become active and past some threshold, nodes in the Word layer becomes active until ultimately a word is recognized.</p>
+</div>
+<div id="fuzzy-logic" class="section level3">
+<h3>Fuzzy logic</h3>
+<p>Fuzzy logic theories of perception (in general) appeal to the probabilistic nature of categorization. So any item has a probability that it is something or not. For example, in the image below the animal on the right is a bear. What about the animal on the left? You likely assign a probability that the animal on the left is a bear, like 30%, while some features of the animal nudge you to thinking it’s a dog (70%).</p>
+<p align="center">
+<img src="images/fuzzy.png" width="50%" height="50%">
+</p>
+<p>In this way, a fuzzy logic approach to speech perception suggests that speech categories are probabilistic, with phoneme identification following from three stages:</p>
+<ol style="list-style-type: decimal">
+<li>Features are evaluated in order to detect a chunk or unit of sound, which is then assigned probabilities for category membership</li>
+<li>Prototype matching: features that are present in stage 1 are compared with prototypes of phonemes stored in memory</li>
+<li>Pattern classification: best match of phoneme is selected for recognition</li>
+</ol>
+</div>
+</div>
+<div id="word-recognition-theories" class="section level2">
+<h2>Word Recognition Theories</h2>
+<p>There is some overlap between theories of speech percepiton and high-level word recognition (we call it “high level” because the word level is an abstraction above the level of the sound). For example, TRACE and other PDP models very much encompass both speech and word recognition. But there are two historically important theories of word recognition that you should be familiar with: Logogen, and Cohort theory.</p>
+<div id="logogens" class="section level3">
+<h3>Logogens</h3>
+<p>A <strong>logogen</strong> is a neural processing device associated with each word in an individual’s lexicon. The logogen contains all info about the word (phonetic, orthographic, semantic, syntactic, etc.). The logogen monitors production to detect any overlapping information. The logogen becomes more or less active as more and more information confirms a word. Whereas other models (from what we’ve learned) rely solely the acoustic signal to achieve recognition, the logogen uses all information available, including contextual and syntactic information.</p>
+</div>
+<div id="cohort-theory" class="section level3">
+<h3>Cohort theory</h3>
+<p>The <strong>cohort theory</strong> works in ways similar to PDP models, in that when a word is heard, unfolding in time,the various acoustic aspects of the signal initiate activation of word word forms. The initial sound of the incoming signal generates a “cohort” of phonological “neighbours”, or words that begin with that initial sound. In the image below, the incoming “st-” sound activates all the words in the listener’s lexicon beginning with that sequence. This is called the <em>Autonomous stage</em>, when the cohort is activated.</p>
+<p align="center">
+<img src="images/Cohort.png" width="50%" height="50%">
+</p>
+<p>As more and more information is gathered, the <em>Interactive stage</em> begins to whittle down the options based on the bottom-up (acoustic) information arriving over time, but also semantic/contextual information.</p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+---
+title: "Audition basics"
+output:
+  html_document:
+    includes:
+      in_header: "favicon.html"
+    theme: paper
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 3
+    #code_folding: hide
+---
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+```
+
+----
+We've spent considerable time discussing the anatomy and physiology of speech production (though we haven't yet addressed consonants, we'll get to that), so today we start our description of the process of hearing or audition. As with production, we'll need to describe some anatomy, but we'll quickly move into the functionality of the inner ear, or how sound is converted into electrical energy that is received by the brain."
+----
+
+# Anatomy of the ear
+
+We might have some lay sense of the structures of the ear as they're talked about in every day language ("you'll blow out your ear drums!"), we've experienced or heard about common ear-related ailments (i.e., ear infections), and the outer structures are mostly visible and a salient aspect of a person's face/head.
+
+The ear is actually made up of three different structures: the **Outer**, **Middle**, and **Inner* ear. 
+
+## Outer ear
+
+The outer ear is made up of two structures: the **Pinna** and the **External Auditory Meatus** (EAM). 
+
+The pinna is the visible "ear," the cartilaginous structure that we identify as an ear, rounded and conch like, with a lobe that people pierce. 
+
+<p align="center">
+  <img src="images/pinna.jpeg" width="40%%" height="40%">
+</p>
+
+The EAM is the narrow tube behind the pinna, it contains cerumen (earwax) and cilia (hair), and it's where we're (NOT supposed to, but usually) jamming in q-tips. The purpose of the pinna and the EAM is to protect the structures further behind (the middle and inner ear). The wax and hairs filter out dirt and sut particles from getting further into the ear. But the EAM also serves an acoustic purpose!
+
+The EAM can be considered a quarter-wave resonator (open at the pinna end and closed at the middle ear end), with a resonant frequency of 3.4kHz. That is well above the level of meaningful formant structure but boosts speech sounds that have high frequency noise, like fricatives. When coupled with the pinna, the entire outer ear system is broadly tuned, amplifying sounds between 2.5 and 5kHz by about 10dB.
+
+> If the resonant frequency of the EAM is 3400Hz, what is the length of the EAM? Work on this at home and we'll discuss the solution in class.
+
+## Middle ear
+
+### Tympanic membrane
+
+The transition from the outer ear to the **middle ear** is marked by the **Tympanic membrane** (TM) or commonly known as the "ear drum". The TM is a thin, oval-shaped membrane that is concave on the external (i.e., facing the EAM) surface, making it like a broad and short cone. The TM is held in position by a ligament and is itself made up of three layers and of varying thickness from the superior to inferior ends. 
+
+<p align="center">
+  <img src="images/normal_TM.jpeg" width="40%%" height="40%">
+</p>
+
+A part of the one of the bones of the middle ear, the **malleus** is embedded in the TM, you can see it in the image above like the arm of a clock. The function of the TM is to receive the fluctuations in air pressure caused by some incident sound. The TM is very sensitive to a wide range of pressures  across a wide range of frequencies. The TM is the first stop in the process of **transduction** of air pressure fluctuations (mechanical movement) to electrical impulse that is decoded by the brain.
+
+The vibration of the TM causes the malleus to move. The malleus makes up a series of tiny bones (the smallest in your body), collectively called the **ossicles**.
+
+### Eustachian tube
+
+The **Eustachian tube** is a tube running from from the middle ear to the nasopharynx portion of the throat. It's made up of cartilage an is approximately 35mm long. It's normally closed at the entrance to the nasopharynx, but opens up during swallowing and yawning (can you hear a little pop when you do either of those things? that's the Eustachian tube opening and closing). The Eustachian tube keeps the middle ear vented and drained by equalizing air pressure between the middle ear and P~atm~. If the tube does not open there is negative pressure in the middle ear. When you plug your nose to allow your ear to "pop," you're forcing the Eustachian tube to open to equalize the pressure in the middle ear. The middle ear is drained of mucus via the Eustachian tube (into the pharynx, where it is then swallowed).
+
+<p align="center">
+  <img src="images/eustachian.png" width="40%" height="40%">
+</p>
+
+### Ossicles
+
+The ossciles are made up of three bones:
+
+1. Malleus: connects to the TM, rather straight bone, the largest of the ossicles at around 8mm
+2. Incus: also called the *anvil*, connects to the malleus at a joint, smaller than the malleus
+3. Stapes: also sometimes called the  *stirrup* because it is U-shaped, with two legs connecting to a footplate
+
+<p align="center">
+  <img src="images/ossicles.png" width="40%" height="40%"><img src="images/ossicles_real.jpeg" width="40%" height="40%">
+</p>
+
+The ossciles are held in place with ligaments, and convert the acoustic pressure fluctuations vibrating the TM into mechanical energy. 
+
+<p align="center">
+  <img src="images/ossicles_animation.gif" width="50%" height="50%">
+</p>
+
+The footplate of the stapes is connected to the cochlea and marks the limit of the middle ear.
+
+### Muscles of the middle ear
+
+Two muscles of the middle ear are the **tensor tympani** and the **stapedius**. The tensor tympani is a long paired muscle of the middle ear. Its attachment to malleus, one of the three auditory ossicles, allows tightening of the tympanic membrane, reducing its vibration amplitude and thus reducing the sound transmission into the inner ear. The stapedius connects to the head of the stapes. Both muscles are involved in the *tympanic reflex*, which is a neat involuntary response of the tympani that protects the inner ear. Within 40ms of a sudden loud sound, like a gunshot or explosion, the tensor tympani and the **stapedius** muscle contract, drawing in the ossicles. This prevents the TM from violently jarring the ossicles, thereby protecting the cochlea (as we will see below). 
+
+<p align="center">
+  <img src="images/tensor_tympani.jpeg" width="50%" height="50%">
+</p>
+
+The middle ear muscles also contract during vocalization as well, thereby attenuating the sound of one's own voice to the inner ear.
+
+### Functions of the middle ear
+
+The middle ear performs three functions:
+
+1. It increases the amount of acoustic energy that gets transmitted to the inner ear by overcoming the impedance mismatch betwen the middle and inner ear. **Impedance** Impedance is a measure of the difficulty of transmitting a signal through a medium. The reason why it's difficult to hear someone talking outside of the pool when your head is under water is due to the impedance mismatch between air and water as media for sound. 
+
+Due to the difference in impedance between the air filled middle ear and the fluid filled inner ear, acoustic energy is reflected, and very little energy is transmitted to the fluid $\rightarrow$ increase the amplitude of the pressure changes at the oval window, which for many reasons is increased by 30dB
+Only about half of the acoustic energy arriving at the tympanic membrane actually ends up being transmitted to the inner ear.
+
+<p align="center">
+  <img src="images/tympanic_amp.png" width="50%" height="50%">
+</p>
+
+2. Attenuate loud sounds via the acoustic reflex
+
+3. Regulate pressure in the middle ear via the Eustachian tube
+
+## Inner ear 
+
+The transition between the middle and inner ear is marked by the stapes connecting to the oval window of the cochlea. This entryway is also called the **vestibule**. The stapes of the ossicles acts as a piston in its transduction of the acoustic energy to mechanical energy and finally to hydraulic energy in the cochlea. For our purposes, the inner ear is basically the **cochlea**.
+
+### Cochlea
+
+The cochlea is housed within the temporal bone (the bone that we called the "temple" part of your head behind your ear). The structure of the cochlea itself is bony and shaped like a snail's shell, a spiral with *base* and a tip called the *apex*. The cochlear "screw" decreases its turn size from the base to the apex. 
+
+<p align="center">
+  <img src="images/cochlea2.webp" width="50%" height="50%">
+</p>
+
+The stapes of the ossicles attaches to the cochlea at its base through a small entry called the **oval window**. If the cochlea spiral were unrolled you would notice that it is actaully made up of two bony channels, and a membranous channel in between. The bony channels are called the **Scala vestibuli** (or *vestibular canal*) and the **Scala tympani** (or *tympanic canal*). The scala vestibuli lies superior to the scala tympani. Both canals are filled with **perlymph**, a liquid that is set into motion by the piston like movement of the stapes (which is itself set into motion by the moving tympanic membrane). The perilymph is pushed along the scala vestibuli, up the spiral. At the apex, the scala vestibula and the scala tympani meet, and the perilymph travels back down the spiral through the scala tympani. 
+
+The pushed perilymph ultimately distends a small opening at the base of the scala tympani called the **round window**, which is covered by a membrane allowing the perilymph to push out (imagine pushing on a water balloon).
+
+<p align="center">
+  <img src="images/cochlea_section.png" width="50%" height="50%">
+</p>
+
+As the perilymph travels up the scala vestibuli (and down the scala tympani) it distends the membranous layer separating the bony canals from the **cochlear duct**. The superior membrane is called **Reissner's membrane** and the inferior membrane is called the **Basilar membrane**. The wave (that is the perilymph), introduces a comparable wave in the **endolymph** which fills the cochlear duct. More importantly, the wave in the perilymph distends the basilar membrane upwards when it reaches its peak amplitude. Here imagine the wave being like the that in the rope below. 
+
+![](https://ds055uzetaobb.cloudfront.net/uploads/RemWkGv8Lh-rope1.gif)
+
+The crest of the wave pushes up on the basilar membrane and when it does so, the **hair cells** lying on top of it, in a structure called the **organ of corti**, are pushed up (in a *shearing action*) an into a covering membrane called the **tectorial membrane**. When this happens the hair cells, which are connected to the auditory nerve going to the brain, fire electrical impulses. 
+
+### Basilar membrane
+
+The basilar membrane, which is the inferior wall of the cochlear duct, is not uniform in width or density. The base end, closer to the "bottom" of the cochlear spiral, is narrow,stiff, and thick, and it gets wider, thinner, and less stiff as it gets closer to the apex. This changing width and thickness results in the membrane being more or less pliant at different parts of the membrane. The area closer to the base, being thick are more sensitive to high frequencies, while the wider, thinner apex area is more sensitive to low frequencies. The apex end is 100 times more flexible than the basal end.
+
+So the physical characteristics of the basilar membrane allows different frequencies of sound to fire hair cells at different portions of the membrane. This is called **Tonotopic organization**. This was discovered by the Hungarian biophysicist [Georg von Bekesy](https://en.wikipedia.org/wiki/Georg_von_B%C3%A9k%C3%A9sy). Below is an animation demonstrating the varying compliance of the basilar membrane at different frequencies.
+
+<p align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZgQ8NeKo2oM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+

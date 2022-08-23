@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Tones, Loudness, Resonance</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link rel="shortcut icon" href="images/logo.jpeg">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">LING2200</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="lecture1.html">Lecture 1</a>
+</li>
+<li>
+  <a href="lecture2.html">Lecture 2</a>
+</li>
+<li>
+  <a href="lecture3.html">Lecture 3</a>
+</li>
+<li>
+  <a href="lecture4.html">Lecture 4</a>
+</li>
+<li>
+  <a href="lecture5.html">Lecture 5</a>
+</li>
+<li>
+  <a href="lecture6.html">Lecture 6</a>
+</li>
+<li>
+  <a href="lecture7.html">Lecture 7</a>
+</li>
+<li>
+  <a href="lecture8.html">Lecture 8</a>
+</li>
+<li>
+  <a href="lecture9.html">Lecture 9</a>
+</li>
+<li>
+  <a href="lecture10.html">Lecture 10</a>
+</li>
+<li>
+  <a href="lecture11.html">Lecture 11</a>
+</li>
+<li>
+  <a href="lecture12.html">Lecture 12</a>
+</li>
+<li>
+  <a href="lecture13.html">Lecture 13</a>
+</li>
+<li>
+  <a href="lecture14.html">Lecture 14</a>
+</li>
+<li>
+  <a href="lecture15.html">Lecture 15</a>
+</li>
+<li>
+  <a href="lecture16.html">Lecture 16</a>
+</li>
+<li>
+  <a href="lecture17.html">Lecture 17</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Tones, Loudness, Resonance</h1>
+
+</div>
+
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+</style>
+<p>In this lecture we begin to dive deeper into the <em>shape</em> of sound–how it looks if we were to plot the movement of air molecules, and how it starts to look different in different conditions.</p>
+<hr />
+<div id="praat-installation" class="section level1">
+<h1>Praat installation</h1>
+<p>It’s very important that you install Praat <a href="https://www.praat.org">www.prat.org</a> on your computer. Praat is a speech analysis tool which has become a default program on every linguist’s computer. I want you to get exposed to a bit about how it works and what you can do with it. It will soon become imperative that you familiarize yourself with this powerful tool as it will be critically important for your future careers in linguistics and speech science.</p>
+<p>Follow the instructions to install Praat on your computer (Mac or PC). For your homework, I’d like you to follow along with the first two videos in this <a href="https://www.youtube.com/channel/UCqU1JprLislAb-lV8Fw_FqA">series</a>: <a href="https://youtu.be/fjlFNOzfdPo">Tutorial 1</a> and <a href="https://youtu.be/xl-6k4FFd6U">Tutorial 2</a></p>
+<p>I would like you to practice:</p>
+<ol style="list-style-type: decimal">
+<li>Recording a small audio file (of your voice) into the Praat objects window</li>
+<li>Download this sound file <a href="sounds/praat_prac1.wav">praat_prac1.wav</a>, save it to your computer, open it in Praat, and measure the duration of the speech<br />
+Have the answer for next class.</li>
+</ol>
+</div>
+<div id="pure-and-complex-sounds" class="section level1">
+<h1>Pure and complex sounds</h1>
+<p>A sound can be composed of one or more frequencies <span class="math inline">\(\rightarrow\)</span> remember that these frequencies represent the movement of the sound wave (itself made up of the movement of air molecules)</p>
+<div id="pure-tones" class="section level2">
+<h2>Pure tones</h2>
+<p>If a sound consists of a single frequency it is called a <strong>pure tone</strong>. A pure tone can be described by <strong>simple harmonic motion</strong>, which is depicted as a sine wave, with a frequency, period, wavelength, etc. Here is an example of a <a href="sounds/440Hz.wav">pure tone</a>, one where one complete cycle of the wave repeats itself 440 times per second (or with a frequency of 440 Hz). Below is an image of the waveform depicting the 440 (I did this in Praat…can you?):</p>
+<p align="center">
+<img src="images/440sine.png" width="70%" height="70%">
+</p>
+<p>Musicians among you may know this tone as the note “A” in a Western traditional 12-tone scale system. If you have a piano or keyboard nearby, play this tone, then the “A” key. Are they the same note? How does your piano (or any other in-tune instrument) sound different from the tone?</p>
+<p align="center">
+<img src="images/a440.jpeg" width="75%" height="75%">
+</p>
+<p>Listen to the two sounds one after the other:</p>
+<audio controls>
+<source src="sounds/a-piano.mp3" type="audio/wav"/>
+</audio>
+<audio controls>
+<source src="sounds/440Hz.wav" type="audio/wav"/>
+</audio>
+<p><br />
+</p>
+</div>
+<div id="complex-sounds" class="section level2">
+<h2>Complex sounds</h2>
+<p>A note struck on the piano <em>does</em> sound different from the pure tone above. The reason it sounds different is because the vibrating metal string in the piano, when struck, produces the 440Hz tone <em>as well</em> as other tones (called “overtones”) resulting in a <strong>complex sound</strong>. The complexity of the sound contributes to the overall <em>voice</em> of the instrument (or “timbre”). Complex sounds can be either <strong>periodic</strong> or <strong>aperiodic</strong>.</p>
+<div id="periodic-sounds" class="section level3">
+<h3>Periodic sounds</h3>
+<p>A complex periodic sound would be like notes playes from an instrument or even vowel sounds coming out of your mouth!</p>
+<figure align="center">
+<img src="images/complex_periodic_vowel.png" width="70%" height="70%">
+<figcaption>
+Periodic complex sound–Vowel.
+</figcaption>
+</figure>
+<br />
+Here is a <a href="sounds/middle_C.mp3">“middle C”</a> from a piano (also a complex periodic wave). Can you identify one complete cycle (or period)?<br />
+
+<figure align="center">
+<img src="images/middle-c.png" width="70%" height="70%">
+<figcaption>
+Periodic complex sound–Piano, Middle C
+</figcaption>
+</figure>
+<p><br />
+</p>
+<p>Here’s a little practice question testing your understanding of frequency in periodic sounds.</p>
+<div id="practice-" class="section level4">
+<h4>Practice—-</h4>
+What is the frequency of the Middle C piano note above? You can calculate it from the waveform given. <!-- Answer options go here -->
+<div class="radio">
+<p><label> <input type="radio" name="question01" id="opt1" value="440Hz" onchange="check_answer()"> 440Hz </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name="question01" id="opt2" value="260kHz" onclick="check_answer()"> 260kHz </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name="question01" id="opt3" value="262.23kHz" onclick="check_answer()"> 262Hz </label></p>
+</div>
+<div class="radio">
+<p><label> <input type="radio" name="question01" id="opt3" value="262.24Hz" onclick="check_answer()"> 262.24Hz </label></p>
+</div>
+<!-- Check answer button -->
+<div>
+<button class="btn btn-primary" type="button" onclick="check_answer()" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+Show / Hide result
+</button>
+</div>
+<div id="collapseExample" class="collapse">
+<div id="answerFeedback" class="card card-body">
+<pre><code>The answer selected was ...</code></pre>
+</div>
+</div>
+<!-- Code to update answer feedback -->
+<script type="text/javascript">
+function check_answer()
+{
+    var radioButtons = document.getElementsByName("question01");
+    document.getElementById("answerFeedback").innerHTML = "Try selecting an answer!!";
+    for(var i = 0; i < radioButtons.length; i++)
+    {
+        if(radioButtons[i].checked == true)
+        {
+            var selectedAnswer = "Your selected answer was " + radioButtons[i].value;
+            <!-- feedback for correct / incorrect response -->
+            var feedback = "Not quite! Have another go." 
+            if(radioButtons[i].value == "262.24Hz") {
+              feedback = "Yup, good job! 3 cycles / 0.01144 seconds = 262.24Hz"
+            }
+            document.getElementById("answerFeedback").innerHTML = selectedAnswer + "<br>" + feedback;
+            return true;
+        }
+    }
+}
+</script>
+<hr />
+</div>
+</div>
+<div id="aperiodic-sounds" class="section level3">
+<h3>Aperiodic sounds</h3>
+<p>Aperiodic sounds are not periodic (or quasi-periodic); the waveform does not show any repeating quality (or periodicity). There are two types of aperiodic sounds:</p>
+<ul>
+<li>Aperiodic sounds are sounds that do not repeat</li>
+<li>Aperiodic sounds are of two types: a <strong>transient</strong> sound or a sound that occurs just once, for a very short time (e.g., a hand clap, a balloon pop, or even one cycle of a sine wave!); a <strong>noise</strong> sound where the pressure at each moment is random and does not depend on the previous moment (e.g., a tire leaking air or <a href="sounds/noise.wav">static</a> on the radio)</li>
+</ul>
+<figure align="center">
+<img src="images/noise.png" width="70%" height="70%">
+<figcaption>
+Aperiodic noise–radio static from above
+</figcaption>
+</figure>
+<p><br />
+</p>
+</div>
+</div>
+<div id="complex-periodic-sounds" class="section level2">
+<h2>Complex periodic sounds</h2>
+<p>Periodic complex sounds are made up of frequencies of sound that are <em>systematically</em> related to each other:</p>
+<ul>
+<li><p>The lowest frequency is called the <strong>Fundamental Frequency</strong>. The fundamental frequency is abbreviated <strong><em>F<sub>0</sub></em></strong>. The fundamental frequency is based on the periodicity of the entire complex sound. The fundamental frequency is not just the frequency of the <strong>lowest component of the complex sound</strong>.</p></li>
+<li><p>Frequencies above <strong><em>F<sub>0</sub></em></strong> are called <strong>harmonics</strong>. For a complex periodic sounds, harmonics are the whole number integer (or a number that can be written down without a fraction part, e.g., 35, 5, 28374) multiples of the fundamental frequency.</p></li>
+</ul>
+<p>For most <strong>naturally</strong> generated complex periodic sounds (like guitar strings, tuning forks, etc.), the source generating the sound vibrates at the fundamental frequency AND at each integer multiple of the F<sub>0</sub>. So, for example, if the F<sub>0</sub> of a tuning fork is 350Hz (ie., the tines of the fork vibrate back and forth 350 times every sec), it also vibrates at 2 x 350Hz, 3 x 350Hz, 4 x 350Hz, 5 x 350Hz, etc. <span class="math inline">\(\rightarrow\)</span> harmonics. The amplitude (we’ll get to this later) of each harmonic decreases. So the loudest harmonic is the first one, the F<sub>0</sub>.</p>
+<figure align="center">
+<img src="images/harmonics_sine.png" width="70%" height="70%">
+<figcaption>
+Fundamental (50Hz) and harmonics
+</figcaption>
+</figure>
+<p><br />
+</p>
+<div id="fourier-analysis" class="section level3">
+<h3>Fourier analysis</h3>
+<p>The complex periodic sound is the sum of many simple periodic tones. So in the picture above, the resulting sound of the tone complex is literally computed by adding each sine wave together. The discovery that a complex periodic sound is the sum of multiple simple tones is called <em>Fourier Analysis</em>, named after the person who discovered it, <a href="https://en.wikipedia.org/wiki/Joseph_Fourier">Joseph Fourier</a>.</p>
+<figure align="center">
+<img src="images/harmonic_waveforms.png" width="70%" height="70%">
+<figcaption>
+The addition of harmonics results in the complex waveform.
+</figcaption>
+</figure>
+<p><br />
+</p>
+</div>
+</div>
+<div id="spectrum" class="section level2">
+<h2>Spectrum</h2>
+<p>Waveforms can be displayed in many ways. We’ve seen how this looks above <span class="math inline">\(\rightarrow\)</span> conveys information about frequency, period, and amplitude but NO information about the components (harmonics in periodic sounds).</p>
+<p>A <strong>spectrum</strong> (or more technically the <strong>line spectrum</strong> in this case) view, however, provides information about the amplitude of the the individual frequencies making up the complex periodic sound.</p>
+<figure align="center">
+<img src="images/Spectrum1.gif" width="50%" height="50%">
+<figcaption>
+Basic line spectrum of 100Hz complex periodic sound. Notice the harmonics at whole integer multiples of the fundamental frequency.
+</figcaption>
+</figure>
+<p><br />
+</p>
+<ul>
+<li>Line spectra represent a “slice” of the sound in the frequency domain. The x-axis represents frequency and the y-axis represents how much energy is in that frequency, or <strong>amplitude</strong>. Wait, but sound happens over time! What happened to the time dimension, like in a waveform? <span class="math inline">\(\rightarrow\)</span> the frequencies themselves must have time built in, so the line spectrum must occur over some interval of time.</li>
+</ul>
+<p>In the line spectrum above, the F<sub>0</sub> is 100Hz (represented by the first vertical line). The line is at 100 on the x-axis, and the height of the line represents the amplitude of that component. In this case, the F<sub>0</sub> is the loudest component. The next component is at 2 x 100Hz or 200Hz, with a component at 300, 400, 500Hz, etc. Notice that each harmonic is lower in amplitude relative to the next lower harmonic <span class="math inline">\(\rightarrow\)</span> this is a feature of naturally vibrating sources.</p>
+<ul>
+<li><p>In a spectrum representation of of sound, there must be some time “chunk” over which the spectrum is computed. We’ll learn how to do this in Praat.</p></li>
+<li><p>Line spectra are NOT used for complex <em>aperiodic</em> sounds, which are characterized by energy across broad bands of frequencies.</p></li>
+<li><p>Aperiodic spectra would have closely spaced lines with no systematic relationship with each other. The sound is best represented by something called a <em>spectral envelope</em> which shows the general shape of the amplitudes of the collective frequencies in the sound.</p></li>
+</ul>
+<figure align="center">
+<img src="images/aperiodic_spectrum.png" width="50%" height="50%">
+<figcaption>
+Spectrum of aperiodic random noise
+</figcaption>
+</figure>
+<p><br />
+</p>
+</div>
+</div>
+<div id="sounds-and-barriers" class="section level1">
+<h1>Sounds and barriers</h1>
+<p>Sounds interact with their environment. Sounds combine with other sounds as well as bounce and get absorbed by barriers. Sometimes sound is not transmitted through barriers or obstacles in its path. The initiation of the sound is called the <strong><em>incident wave</em></strong>, and only a small portion of it may be transmitted through barriers and depends upon the properties of both the sound and barrier.</p>
+<div id="absroption" class="section level2">
+<h2>Absroption</h2>
+<p>Sounds may be <strong>absorbed</strong> or may be reflected. Softer and more porous materials absorb sounds more than do harder, denser materials. This is important to consider when we think about speech sounds and the structure and composition of our mouths.<br />
+</p>
+<figure align="center">
+<img src="images/blob.gif" width="50%" height="50%"> <!-- <figcaption>Spectrum of aperiodic random noise</figcaption> -->
+</figure>
+<p><br />
+</p>
+</div>
+<div id="reflection" class="section level2">
+<h2>Reflection</h2>
+<p>Hard, smooth objects tend to <strong>reflect</strong> sounds (similar to how a mirror works). The amount of reflection depends on just how similar the object is to the medium within which the sound is traveling (in our case, air). If the object is hard and smooth like a concrete wall, then we expect the sound to bounce off, creating an echo or a reverberation. Echoes occur when the reflected sound wave takes more than 100 miliseconds to reach your ear. Reflected sounds that are received by your ears in less time are essentially processed by your brain as prolonged sounds. This occurs mostly when sound is reflected off of mutliple walls or barriers. Here is a neat little animation from physicsclassroom.com showing the difference between echo and reverberation as a result of distance and time travelled by the source sound back to the listener’s ear.</p>
+<figure align="center">
+<img src="images/er.gif"> <!-- <figcaption>Spectrum of aperiodic random noise</figcaption> -->
+</figure>
+<p><br />
+</p>
+</div>
+<div id="refraction-and-diffraction" class="section level2">
+<h2>Refraction and Diffraction</h2>
+<ul>
+<li><p><strong>Refraction</strong> is another phenomenon where sound changes direction, either as a result of a change in medium (say from air to water) or a change in temperature. A typical example of refracting sound is when it passes over a body of water. The air above water tends to be cooler than when it is not above water. Sound waves tend to <em>refract</em> or bend towards cooler air, which slows down the wave relative to warmer air much higher above.</p></li>
+<li><p><strong>Diffraction</strong> is when the sound waves past an object or through an opening. Imagine a wall separating two rooms with a doorway between. If you’re standing in one room and your friend in the other, the reason why you’re able to hear each other is because sound waves travel around the edge of the wall and through the opening. Ultimately this depends on the wavelength (see Lecture 1) of the sound. If the wavelength of the sound is of similar size to the obstacle (in this example, the wall), then the sound will easily bend around it. Similarly, we can hear distant thunder (low frequency) because of its long wavelength, allowing the sound to diffract around obstacles like trees and houses.</p></li>
+</ul>
+</div>
+<div id="interference" class="section level2">
+<h2>Interference</h2>
+<p>We’re not going to get too deep into the precise physics of a sound wave’s interaction with obstacles or changes in mediums, but we <em>can</em> describe in some detail how sound waves interact with other sound waves. The interaction can be broadly described as <strong>interference</strong>, and specifically <em>constructive</em> or <em>destructive</em> interference. The concepts are fairly easy to understand as additive.</p>
+<figure align="center">
+<img src="images/constructive.png"> <!-- <figcaption>Spectrum of aperiodic random noise</figcaption> -->
+</figure>
+<p><br />
+</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

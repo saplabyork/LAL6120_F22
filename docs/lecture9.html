@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Articulation and Resonance</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link rel="shortcut icon" href="images/logo.jpeg">
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">LING2200</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="lecture1.html">Lecture 1</a>
+</li>
+<li>
+  <a href="lecture2.html">Lecture 2</a>
+</li>
+<li>
+  <a href="lecture3.html">Lecture 3</a>
+</li>
+<li>
+  <a href="lecture4.html">Lecture 4</a>
+</li>
+<li>
+  <a href="lecture5.html">Lecture 5</a>
+</li>
+<li>
+  <a href="lecture6.html">Lecture 6</a>
+</li>
+<li>
+  <a href="lecture7.html">Lecture 7</a>
+</li>
+<li>
+  <a href="lecture8.html">Lecture 8</a>
+</li>
+<li>
+  <a href="lecture9.html">Lecture 9</a>
+</li>
+<li>
+  <a href="lecture10.html">Lecture 10</a>
+</li>
+<li>
+  <a href="lecture11.html">Lecture 11</a>
+</li>
+<li>
+  <a href="lecture12.html">Lecture 12</a>
+</li>
+<li>
+  <a href="lecture13.html">Lecture 13</a>
+</li>
+<li>
+  <a href="lecture14.html">Lecture 14</a>
+</li>
+<li>
+  <a href="lecture15.html">Lecture 15</a>
+</li>
+<li>
+  <a href="lecture16.html">Lecture 16</a>
+</li>
+<li>
+  <a href="lecture17.html">Lecture 17</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Articulation and Resonance</h1>
+
+</div>
+
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+</style>
+<table>
+<tbody>
+<tr class="odd">
+<td>Now that we have a basic understanding of how and why phonation happens, as well as the resonant properties of tubes, we can put them all together into a theory of what happens to the glottal spectrum as the sound excites the air in your mouth.</td>
+</tr>
+</tbody>
+</table>
+<div id="vocal-tract-resonance" class="section level2">
+<h2>Vocal tract resonance</h2>
+<p>The human vocal tract is really well suited for producing a wide variety of sounds. The length of the vocal tract as well as the coupling of various tube-like structures (like the oral cavity, the pharynx, the nasal cavity) all contribute to <a href="lecture5.html">filter</a> shapes that amplify many different frequency bands when in different configurations.</p>
+<p>At some point in the course of evolution, the larynx began to sit lower in the neck relative to our nearest human-like primate ancestors (<a href="https://humanorigins.si.edu/evidence/human-fossils/species/homo-neanderthalensis">Homo Neanderthalensis</a>). Neanderthals had a larynx higher in the neck, resulting in a shorter vocal tract.</p>
+<p align="center">
+<img src="images/neanderthal.jpg" width="60%%" height="60%">
+</p>
+<p><br />
+</p>
+<p>The vocal tract is a <strong>resonator</strong>, just like we saw in the tube and Helmholtz discussion. The resonator is a filter that “let’s through” some frequencies from the glottal spectrum, and attenuates (or “turns down”) other frequencies. There are four important characteristics of the resonator:</p>
+<ol style="list-style-type: decimal">
+<li><p>The tube is closed at one end (open-closed) <span class="math inline">\(\rightarrow\)</span> quarter-wave resonator with lowest resonance with a wavelength of 4x the length of the tube. Higher resonances are odd multiples of the lowest resonance. Remember: <span class="math display">\[
+F_1 = \frac{v}{4L}; 
+F_2 = 3(\frac{v}{4L});
+F_3 = 5(\frac{v}{4L});
+F_4 = 7(\frac{v}{4L})...
+\]</span></p></li>
+<li><p>The vocal tract can be considered a series of containers (a sequence of attached tubes). Each tube has its own resonant frequency (RF), with each cavity acting as a bandpass filter (amplifying certain frequencies and attenuating others)</p></li>
+<li><p>The vocal tract is a <em>broadly tuned</em> resonator, letting though a wide bandwidth of frequencies</p></li>
+<li><p>The vocal tract is a <em>variable resonator</em> that is, the tubes are not of uniform dimension. The cross-sectional areas and length of the tubes are constantly changing. Take a look at the video below and see how quickly the shape of the oral and pharygeal (the area above the larynx) changes. Consequently the frequency response of the connected tubes are constantly changing.</p></li>
+</ol>
+<p align="center">
+<video width="420" height="340" controls>
+<source src="images/mri_chris.mp4" type="video/mp4">
+</video>
+</p>
+</div>
+<div id="formants" class="section level1">
+<h1>Formants</h1>
+<p><strong>Formants</strong> are what we call the lowest resonant frequencies of the vocal tract resonator. So if we think about the vocal tract like a filter, it will have resonances at various frequencies (given in the equations if we model the vocal tract like an open-closed tube). These resonances are also called <em>prominences</em> or areas in the frequency spectrum where the glottal sound is amplified.</p>
+<p>When we talk specifically about formants, we’re dealing with speech. That is, we don’t talk about the harmonic resonances of tubes as <em>formants</em>, which is reserved for vocal tract resonances. The lowest frequency is the <strong>first formant</strong> abbreviated as <strong>F1</strong>. Higher formants are odd multiples of F1 for a basic, uniform length open-closed tube. This is comparable to a basic vowel sound called <strong>schwa</strong> which is written as <strong>ə</strong>.</p>
+<div id="schwa-and-vocal-tract-length" class="section level2">
+<h2>Schwa and vocal tract length</h2>
+<p>The average male ə has an F1=500Hz, F2=1500Hz, F3=2500Hz, and F4=3500Hz. Can we calculate the length of the average male vocal tract based on these formants? Well, we know that: <span class="math display">\[F_1 = \frac{v}{4L}\]</span> If we take <span class="math inline">\(v\)</span> = 340m/s, we need to convert it to cm, because vocal tracts are much smaller than a meter, so <span class="math inline">\(v\)</span> = 34000cm/s. So we have: <span class="math display">\[ 
+500Hz = \frac{34000cm/s}{4L}
+\]</span> <span class="math display">\[
+4L = \frac{34000}{500}; L = \frac{68}{4} = 17cm
+\]</span></p>
+<div id="measuring-your-vocal-tract" class="section level3">
+<h3>Measuring your vocal tract</h3>
+<ol style="list-style-type: decimal">
+<li><p>Use Praat to figure out the length of your vocal tract!</p></li>
+<li><p>Record your voice saying the sound “<a href="sounds/uhh.wav">uuuuuuhhhhhh</a>” for at least 2 seconds. The main vowel in this utterance is schwa.</p></li>
+<li><p>New &gt; Record mono sound &gt; *record the word the “save to list”</p></li>
+<li><p>View and Edit your sound</p></li>
+<li><p>Highlight the vowel (the loudest portion of the waveform) then Formant &gt; “Show formants”. Your waveform should look like it does below, with dots highlighting the formants in the vowel. Remember, these are the loudest part of the spectrum.</p></li>
+</ol>
+<p align="center">
+<img src="images/schwa_wave.png" width="60%%" height="60%">
+</p>
+<p><br />
+</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Next go to Formant &gt; Get first formant. Write the number down. From this number you can calculate your vocal tract length! My F1 is 419Hz, so my vocal tract is 20.2cm or thereabouts. Can you calculate yours?</li>
+</ol>
+</div>
+</div>
+<div id="source-filter-model" class="section level2">
+<h2>Source-filter model</h2>
+<p>The formal model of vowel production is called the <strong>source-filter model</strong> and was developed by <a href="https://en.wikipedia.org/wiki/Gunnar_Fant">Gunnar Fant</a>. At its core, the source-filter model is quite simple. Now that you know that the vocal folds produce a spectrum of frequencies when oscillating (or the <strong>source</strong>), the vocal tract acts as a <strong>filter</strong> for that source, so what we hear when someone speaks is the output of this process.</p>
+<p>There are three components to the source-filter model:</p>
+<ol style="list-style-type: decimal">
+<li><p>The glottal source spectrum</p></li>
+<li><p>The <strong>transfer function</strong> of the vocal tract: the acoustic prominences in the frequency spectrum, often visualized as a spectral <em>envelope</em> or shape of the filter</p></li>
+<li><p>The output spectrum which we actaully hear</p></li>
+</ol>
+<p>In the schematic picture below, the source spectrum has a F<sub>0</sub> of 100Hz and likely has the typical 12dB/octave roll-off. That spectrum is fed into the vocal tract transfer function (notice the shape of the envelope). The output function has a shape similar to the transfer function, with certain frequencies amplified and others dampened, so the vocal tract makes an imprint on the output sound.</p>
+<p align="center">
+<img src="images/source_filter.jpg" width="60%%" height="60%">
+</p>
+<p><br />
+</p>
+<p>Again, the model above is an idealized model of a relatively open-closed tube giving rise to schwa. Of course languages use many many more vowels sounds than the idealized schwa. The envelope of the transfer function for all other vowels reflect the relationship between the oral (the mouth) and pharyngeal (space above the larynx) cavities. The changing shape of the two connected cavities is affected by the tongue and the lips. You can make the oral cavity larger by articulating a vowel further back in the mouth (like /u/ “ooo”) and moving it more forward to make the cavity smaller (like in /i/ “eee”).</p>
+<p>The volumes of the two cavities affect their resonances, with smaller volumes generally having resonances at higher frequencies and larger volumes at lower frequencies.</p>
+<blockquote>
+<p>The first formant (F1) is related to the size of the pharyngeal cavity (and the tightness of the constriction). F2 is related to the length of the oral cavity</p>
+</blockquote>
+<p>F1 and F2 are used to acoustically classify vowel sounds. Let’s take a look at oral and pharyngeal tract shapes and how they affect F1 and F2 in common vowels.</p>
+</div>
+<div id="i-and-a" class="section level2">
+<h2>/i/ and /a/</h2>
+<p>The /i/ vowel is in words like “keep” or “eel”. It’s produced with the tonge blade (a technical term we’ll come back to) forward in the mouth towards the palate, which results in a large cavity behind the construction, essentially makig pharyngeal cavity large. As a result, F1 is lowered. The cavity in front of the tongue is small and short, resulting a high F2.</p>
+<p>The /a/ vowel is the one in word like “father” (though there’s lots of variation, this is roughly in the right neighborhood). The tongue configuration here is smoewhat the opposite of the configuration for /i/, with a small pharyngeal cavity (high F1) and a large oral cavity (low F2).</p>
+<p>We can also extend (and shorten) the length of the oral cavity by manipulating the lips. By rounding your lips, you’re essentially extending the length of the oral cavity because they end up being protrouded. Likewise when you spread your lips, you shorten the oral cavity relative to a neutral position. In the picture below, you’ll see models of /i/ and /u/ (where the lips are rounded). Notice that the tongue is in roughly the same position, with similar pharyngeal volumes. The oral cavity for /u/ is longer and as a result F2 is lower than in /i/.</p>
+<p align="center">
+<img src="images/transfer_fucntion_iu.png" width="60%%" height="60%">
+</p>
+<p><br />
+</p>
+</div>
+<div id="vowel-formants" class="section level2">
+<h2>Vowel formants</h2>
+<p>As mentioned above, vowels are generally characterized by F1, F2, and sometimes F3. How can we change F1 and F2? We can change length of the vocal tract and we can also change how tightly we articulate or the degree of the constriction. When the tongue is moved to a particular position we have control over how close to palate the tongue is. If it is making contact with the palate then the air is stopped behind the constriction (which is what we do with consonants or stops). For vowels, the tongue must approach the palate but not make contact. The closer the constriction in the vocal tract (or the tighter the articulation), the lower the F1. If there is a constriction with the back of the tongue, F2 is lowered. If the front of the tongue is constricted, F2 will raise, and F1 will lower (as the constriction is in the vocal tract).</p>
+<p align="center">
+<img src="images/tongue_movement.gif" width="60%%" height="60%">
+</p>
+<p><br />
+</p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

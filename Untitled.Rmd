@@ -1,0 +1,25 @@
+---
+title: "Phonation"
+output:
+  html_document:
+    includes:
+      in_header: "favicon.html"
+    theme: paper
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 3
+    #code_folding: hide
+---
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+```
+
+Today's mini-lecture (the second half of the lecture is dedicated to reviewing the old lectures in prep for the Midterm) deals with *phonation*, or the vibration of the vocal folds prviding the *source* sound to the upstream cavities resulting in vowel-like sounds. 

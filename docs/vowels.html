@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Chandan Narayan" />
+
+<meta name="date" content="2022-12-03" />
+
+<title>Class vowels</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">LING2200</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="lecture1.html">Lecture 1</a>
+</li>
+<li>
+  <a href="lecture2.html">Lecture 2</a>
+</li>
+<li>
+  <a href="lecture3.html">Lecture 3</a>
+</li>
+<li>
+  <a href="lecture4.html">Lecture 4</a>
+</li>
+<li>
+  <a href="lecture5.html">Lecture 5</a>
+</li>
+<li>
+  <a href="lecture6.html">Lecture 6</a>
+</li>
+<li>
+  <a href="lecture7.html">Lecture 7</a>
+</li>
+<li>
+  <a href="lecture8.html">Lecture 8</a>
+</li>
+<li>
+  <a href="lecture9.html">Lecture 9</a>
+</li>
+<li>
+  <a href="lecture10.html">Lecture 10</a>
+</li>
+<li>
+  <a href="lecture11.html">Lecture 11</a>
+</li>
+<li>
+  <a href="lecture12.html">Lecture 12</a>
+</li>
+<li>
+  <a href="lecture13.html">Lecture 13</a>
+</li>
+<li>
+  <a href="lecture14.html">Lecture 14</a>
+</li>
+<li>
+  <a href="lecture15.html">Lecture 15</a>
+</li>
+<li>
+  <a href="lecture16.html">Lecture 16</a>
+</li>
+<li>
+  <a href="lecture17.html">Lecture 17</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Class vowels</h1>
+<h4 class="author">Chandan Narayan</h4>
+<h4 class="date">12/03/2022</h4>
+
+</div>
+
+
+<div id="task" class="section level2">
+<h2>Task</h2>
+<p>You were asked to record yourself saying “heat,” “heat,” “hoot,” “hot,” and “hut,” and then measure F1 and F2 for each word from the steady-state portion of the vowel. The resulting data are here:</p>
+<pre class="r"><code>vowels &lt;- read.csv(&quot;LING2200_vowels.csv&quot;, header=TRUE)
+vowels</code></pre>
+<pre><code>##    sub vowel      F1      F2
+## 1   CN  heat  302.30 2390.78
+## 2  AMV  heat  328.90 2962.46
+## 3   QD  heat  298.82 2992.94
+## 4   AD  heat  401.00 2335.64
+## 5   EP  heat  371.75 2952.28
+## 6   EL  heat  315.96 2153.95
+## 7   RB  heat  393.70 3272.90
+## 8   SS  heat  373.26 3108.01
+## 9   DN  heat  292.89 2606.02
+## 10 WZW  heat  247.04 2464.30
+## 11 SLS  heat  287.49 2943.58
+## 12  MG  heat  390.02 3161.59
+## 13  MR  heat  385.50 2746.54
+## 14  JB  heat  294.42 2890.58
+## 15  AA  heat  336.47 2985.85
+## 16  SP  heat  418.27 3157.54
+## 17  ET  heat  371.80 2618.40
+## 18  FR  heat  262.72 2694.68
+## 19  NR  heat  359.77 3016.47
+## 20  CN  hoot  328.52 1138.56
+## 21 AMV  hoot 1061.09 2275.30
+## 22  QD  hoot  315.16 1195.92
+## 23  AD  hoot  393.99  878.52
+## 24  EP  hoot  360.37  859.86
+## 25  EL  hoot  469.36 1279.69
+## 26  RB  hoot  444.90 1223.10
+## 27  SS  hoot  308.79 1081.36
+## 28  DN  hoot  280.27 1012.43
+## 29 WZW  hoot  779.70 2689.58
+## 30 SLS  hoot  284.08 1078.30
+## 31  MG  hoot  454.06 1550.18
+## 32  MR  hoot  476.46  874.14
+## 33  JB  hoot  369.83 1251.17
+## 34  AA  hoot  294.68 1486.44
+## 35  SP  hoot  409.12 1161.44
+## 36  ET  hoot  415.30 1282.30
+## 37  FR  hoot  662.08 1918.90
+## 38  NR  hoot  412.63 1614.33
+## 39  CN   hot  790.62 1093.18
+## 40 AMV   hot 1065.54 1603.96
+## 41  QD   hot  927.12 1333.79
+## 42  AD   hot  937.93 1392.42
+## 43  EP   hot  743.24 1182.43
+## 44  EL   hot  983.92 1334.31
+## 45  RB   hot  850.60 1260.20
+## 46  SS   hot  945.89 1116.58
+## 47  DN   hot  791.78 1173.77
+## 48 WZW   hot  918.16 1084.02
+## 49 SLS   hot  938.67 1616.32
+## 50  MG   hot  931.07 1555.34
+## 51  MR   hot  929.91 1375.95
+## 52  JB   hot  695.09 1060.07
+## 53  AA   hot  890.02 1231.14
+## 54  SP   hot  888.33 1289.43
+## 55  ET   hot  893.20 1191.00
+## 56  FR   hot  903.25 1591.87
+## 57  NR   hot  800.15 1250.57
+## 58  CN  hate  443.24 2225.84
+## 59 AMV  hate  352.66 2915.82
+## 60  QD  hate  363.95 2590.69
+## 61  AD  hate  506.07 2864.41
+## 62  EP  hate  402.11 2662.44
+## 63  EL  hate  481.35 2199.11
+## 64  RB  hate  393.00 2611.80
+## 65  SS  hate  299.16 1216.32
+## 66  DN  hate  434.55 2598.98
+## 67 WZW  hate  480.84 2094.04
+## 68 SLS  hate  405.66 2963.12
+## 69  MG  hate  484.39 2862.51
+## 70  MR  hate  474.89 2429.70
+## 71  JB  hate  393.73 2807.16
+## 72  AA  hate  468.32 2442.03
+## 73  SP  hate  422.85  979.12
+## 74  ET  hate  404.20 2590.30
+## 75  FR  hate  529.92 2720.17
+## 76  NR  hate  467.30 2269.37
+## 77  CN   hut  727.88 1347.71
+## 78 AMV   hut 1014.92 1952.35
+## 79  QD   hut  643.79 1595.44
+## 80  AD   hut  885.99 1850.27
+## 81  EP   hut  734.88 1372.93
+## 82  EL   hut  998.35 1594.93
+## 83  RB   hut  922.00 1503.20
+## 84  SS   hut  897.59 1660.27
+## 85  DN   hut  721.03 1289.78
+## 86 WZW   hut  929.04 1368.95
+## 87 SLS   hut  828.50 1165.79
+## 88  MG   hut  815.93 1726.62
+## 89  MR   hut  720.98 1465.47
+## 90  JB   hut  694.17 1551.39
+## 91  AA   hut  699.97 1763.88
+## 92  SP   hut  821.80 1633.42
+## 93  ET   hut  799.50 1564.60
+## 94  FR   hut  771.72 1700.56
+## 95  NR   hut  825.86 1465.82</code></pre>
+</div>
+<div id="class-vowel-space" class="section level2">
+<h2>Class vowel space</h2>
+<p>Here is the code to generate the vowel space for the class:</p>
+<pre class="r"><code>library(ggplot2)
+vowel_plot &lt;- ggplot(vowels, aes(x = F2, y = F1, color = vowel, label = vowel)) + labs(title = &quot;LING2200 vowel space&quot;) +
+     geom_text() + xlim(0,4000) + ylim(0,1500) + scale_y_reverse() + scale_x_reverse() +  stat_ellipse() + theme_bw()</code></pre>
+<pre><code>## Scale for &#39;y&#39; is already present. Adding another scale for &#39;y&#39;, which will
+## replace the existing scale.</code></pre>
+<pre><code>## Scale for &#39;x&#39; is already present. Adding another scale for &#39;x&#39;, which will
+## replace the existing scale.</code></pre>
+<pre class="r"><code>vowel_plot</code></pre>
+<p><img src="vowels_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

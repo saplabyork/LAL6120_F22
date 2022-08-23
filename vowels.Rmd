@@ -1,0 +1,29 @@
+---
+title: "Class vowels"
+author: "Chandan Narayan"
+date: "12/03/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Task
+
+You were asked to record yourself saying "heat," "heat," "hoot," "hot," and "hut," and then measure F1 and F2 for each word from the steady-state portion of the vowel. The resulting data are here:
+
+```{r}
+vowels <- read.csv("LING2200_vowels.csv", header=TRUE)
+vowels
+```
+
+## Class vowel space
+
+Here is the code to generate the vowel space for the class:
+```{r}
+library(ggplot2)
+vowel_plot <- ggplot(vowels, aes(x = F2, y = F1, color = vowel, label = vowel)) + labs(title = "LING2200 vowel space") +
+     geom_text() + xlim(0,4000) + ylim(0,1500) + scale_y_reverse() + scale_x_reverse() +  stat_ellipse() + theme_bw()
+vowel_plot
+```
