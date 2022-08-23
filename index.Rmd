@@ -1,5 +1,5 @@
 ---
-title: "LING 2200"
+title: "LAL 6120"
 output: 
   html_document:
     includes:
@@ -26,13 +26,13 @@ output:
 <div class="row" style="padding-top: 30px;">
 <div class="col-sm-6">
 
-# **Introduction to Speech and Language Sciences**
+# **Phonetic and Phonological Analysis**
 
-Tuesdays & Thursdays, 11:30-1pm\
-[Stong College](https://www.yorku.ca/colleges/stong/), Rm. 216\
+Wednesdays, 2:30-5:30pm\
+[Calumet College](https://www.yorku.ca/colleges/calumet/), Rm. 318\
 Instructor: [Chandan Narayan](https://ch-narayan.github.io)\
 Contact: [chandann@yorku.ca](mailto:chandann@yorku.ca)\
-[Course outline and schedule](LING2200syllabus.html)
+[Course outline and schedule](LAL6120syllabus.html)
 
 ### About
 
