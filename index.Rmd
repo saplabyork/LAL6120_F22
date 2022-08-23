@@ -46,6 +46,6 @@ This site is meant to serve as the primary resource for our discussions. On occa
 </div>
 <div class="col-sm-6">
 
-![](images/Figure1.png)
+![](images/hide_fmt_track.gif)
 </a>
 </div>
