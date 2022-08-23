@@ -36,11 +36,11 @@ Contact: [chandann@yorku.ca](mailto:chandann@yorku.ca)\
 
 ### About
 
-XXX
+This course provides a graduate-level introduction to phonetics and phonology. The course covers some basics of speech acoustics and then engages with primary research in detail addressing few phonological features and their acoustic manifestation. We also discuss the role of speech production, acoustics, and perception in the shaping of phonological systems of the world's languages. Students will learn about experimental research in phonetics and phonology as well as the implementation of a phonological research program.
 
 ### How to use this site
 
-This site is meant to serve as a supplement to the delivered lectures and associated slides posted on [eClass](https://eclass.yorku.ca). The notes will give a bit more detail than the slides, as well as some practice problems of the type you might encounter on quizzes and exams. 
+This site is meant to serve as the primary resource for our discussions. On occasion we will also use [eClass](https://eclass.yorku.ca) for discussion boards. 
 
 
 </div>

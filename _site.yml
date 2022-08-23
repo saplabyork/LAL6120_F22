@@ -6,36 +6,4 @@ navbar:
       href: index.html
     - text: "Lecture 1"
       href: lecture1.html
-    - text: "Lecture 2"
-      href: lecture2.html
-    - text: "Lecture 3"
-      href: lecture3.html
-    - text: "Lecture 4"
-      href: lecture4.html
-    - text: "Lecture 5"
-      href: lecture5.html
-    - text: "Lecture 6"
-      href: lecture6.html
-    - text: "Lecture 7"
-      href: lecture7.html
-    - text: "Lecture 8"
-      href: lecture8.html
-    - text: "Lecture 9"
-      href: lecture9.html
-    - text: "Lecture 10"
-      href: lecture10.html
-    - text: "Lecture 11"
-      href: lecture11.html
-    - text: "Lecture 12"
-      href: lecture12.html
-    - text: "Lecture 13"
-      href: lecture13.html
-    - text: "Lecture 14"
-      href: lecture14.html
-    - text: "Lecture 15"
-      href: lecture15.html
-    - text: "Lecture 16"
-      href: lecture16.html
-    - text: "Lecture 17"
-      href: lecture17.html
 output_dir: "docs"
