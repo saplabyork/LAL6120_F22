@@ -1,0 +1,149 @@
+---
+title: "LAL6120syllabus"
+output: 
+  html_document:
+    theme: paper
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+install.packages("kableExtra",repos = "http://cran.us.r-project.org")
+library(kableExtra)
+```
+
+```{=html}
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+</style>
+```
+```{=html}
+<style type="text/css">
+.title {
+  display: none;
+}
+
+#getting-started img {
+  margin-right: 10px;
+}
+
+</style>
+```
+# **LAL 6120: Phonetic and Phonological Analysis** 
+
+Wednesdays, 2:30pm, Calumet College, Rm.318\
+Instructor: [Chandan Narayan](https://ch-narayan.github.io)\
+Office hours: Tuesdays and Thursdays 10-11am [Zoom link](https://yorku.zoom.us/j/97755816919?pwd=L1krNjJlUm9TL2RWWE1HWnZwNXZLQT09)\
+Course website: \## Course Outline and Schedule
+
+------------------------------------------------------------------------
+
+## Course description:
+
+This course provides a graduate-level introduction to phonetics and phonology. We will cover some basics of acoustic phonetics and take a deep dive into a few phonological feature and their acoustic-phonetic manifestation. We will also be reading primary research in phonetics and speech perception and discussing their role in the shaping of sound systems and the directions of phonological change. Throughout the course students will be introduced to instrumental techniques in phonetics (using PRAAT) and some basics of analyzing data using the R statistical software. The course culminates in students conducting their own mini phonetics experiment.
+
+<!-- ## Course prerequisites: -->
+
+<!-- LING 1000 and PSYC 1010. This class is predicated on your knowing some fundamental concepts in Linguistics and/or Psychology. Therefore, you must have all the prerequisite courses in order to take this class. Special exceptions are made on a case-by-case basis. -->
+
+## Learning outcomes:
+
+1.  Develop a basic knowledge of acoustic phonetics, speech perception, and their relationship to phonological patterns
+2.  Develop skills in the critical analysis of research papers in acoustic phonetics and speech perception
+3.  Develop basic practical skills in speech acoustic analysis using Praat and data analysis using R
+4.  Design and carry out an original research project in phonetics and phonology
+5.  Understand the steps involved in receiving ethics approval for a research project involving human participants
+
+## Evaluation
+
+Your grade in the course will be determined by your performance on the following:
+
+-   Annotated bibliographies: 10%
+-   Assignments: 20% (2 x 10%)
+-   Presentations: 10% (2 x 5%)
+-   Midterm project: 20%
+-   Final proj: 35%
+-   Participation/Perusall: 5%
+
+## Course text and readings
+
+All readings will be made available on the course [website](https://saplabyork.github.io/LAL6120_F22). Students may find these additional/recommended readings useful, though they are **not required** reading:
+
+> Johnson, K. (2011), *Acoustic and Auditory Phonetics* (Wiley) Winter, B. (2020), *Statistics for Linguists: An Introduction Using R* (Routledge)
+
+## eClass
+
+I will be recording our in-class demos which will be made available via the [eClass](http://eclass.yorku.ca) site for the course. Additionally, all submissions will be made through eClass.
+
+### Lecture notes
+
+Every week's discussion will be accompanied by [notes](%22docs/index.html%22). NARAYAN-XW726
+
+### Annotated bibliography
+
+For most classes (except for weeks 1, 5, and 12), you will be required to write an annotated bibliography entry for the required readings for that week's class. This includes: (a) summary of the article (minimum 1-2 paragraphs), (b) discussion/reaction, and (c) discussion questions. These must be submitted each week by Monday at 11:59pm on eClass, so that the questions can be integrated into the discussion for each Wednesday class. Marking will be based on a score out of 2: 2/2 (excellent; shows thoughtful discussion and attempt at understanding), 1/2 (assignment complete but with minimal effort or submitted late), 0/2 (not submitted). Submission of late assignments without a valid excuse will entail an automatic 1-point (50%) deduction per assignment. Late assignments will be accepted up until the last day of class.
+
+### Perusall contributions
+
+The online tool [Perusall](http://perusall.com) will be used in this class to help stimulate class discussions online and help with your own reading of the assigned papers. Please set up an account at Perusall and use NARAYAN-XW726 for the course code.
+
+Perusall allows us to collaboratively annotate the readings online; for example, students can add comments/questions to specific parts of a reading and you can respond to other students' comments/questions. To get credit for Perusall contributions, students are required to add at least one comment/question and respond to at least one comment/question for each week's reading. Responses do not need to provide the answer, even echoing/elaborating on another student's question is sufficient; however, they must be more substantive that 'I agree'---you need to think about why. Marking is based on a score of 2: 2/2 (excellent; thoughtful comment + response), 1/2 (incomplete or marginal comment and/or response), 0/2 (not submitted or marginal comment + response).
+
+### Class structure
+
+The structure of each class is highly variable, but will be very much driven by the students. Each week we will be discussing a theme and a paper going along with that theme. Classes will consist of (a) hands-on practice doing acoustic analysis using Praat, (b) analysis of phonetic data using R, (c) discussion of readings and articles, and (d) presentations by students.
+
+### Participation
+
+Students are expected to attend and be prepared for every class. Students must complete each reading and assignment before class each week. The annotated bibliography and Perusall assignments are designed to guide you in your reading and understanding of the material. Students are expected to contribute to weekly discussions by answering questions, posing their own questions, offering solutions to problems, etc.
+
+### Email policy
+
+If you cannot attend the scheduled office hour, contact me to arrange another time. I will do my best to answer your phone and email messages promptly. I do not, generally, answer email on the weekend. Please email me from your yorku.ca account and put 'LAL 6120' in the subject line. Emails sent from non-York accounts will be ignored. Please sign your emails; I will not reply to anonymous messages. My response to your email may be brief and may not come within 48 hours. **Please be patient**.
+
+### Tech
+
+Throughout the course, we will integrate discussion of theoretical topics with the development of skills in acoustic phonetics. We will primarily be using a free, cross-platform computer program called Praat (<http://www.fon.hum.uva.nl/praat/>). We will also be using the **R** statistical software to analyze and visualize data via the desktop tool called R-Studio (<https://www.rstudio.com/>), which is free and open-source program. If you have a laptop, you will be encouraged to bring it to class with you on those days in which we will be doing demos in order to follow along. At various points in the semester, we will also discuss techniques for audio recording, and get practice recording your own voice and possibly that of friends or family members. You will need to have access to a headset or external microphone that can plug into your laptop or tablet/phone so that you can record your own voice (or possibly that of a friend or family member). Please get in touch with me should you not have either a computer or access to a microphone as the SAP Lab will have some to loan.
+
+### Ethics
+
+As part of this course, students will record and analyze audio recordings of their voice and possibly those of family or friends. All research at York involving human participants requires ethics clearance, and as part of this, all students in this course are required to complete the TCPS2 tutorial on research ethics, which can be completed online in about 3 hours (<https://ethics.gc.ca/eng/education_tutorial-didacticiel.html>). Students are required to submit your certificate to me by email by September 28. Note that if you completed this tutorial elsewhere, you do not need to complete it again; just download and send me your certificate.
+
+### Assignments
+
+Homework assignments will primarily aim to develop skills in acoustic analysis, and will involve the analysis of prepared data. Submission of assignments will be via eClass.
+
+###Article presentations Each student will present two papers during the term. Paper 1 (Week 5): presentation of one short paper from JASA (Journal of the Acoustical Society of America) or Journal of Phonetics (or similar) on the analysis of VOT or vowel formants. Paper 2 (Weeks 7-10): presentation of one paper on a topic your choice, pre-approved by me at least one week before your presentation. When presenting your papers, you are asked to (a) thoroughly read the paper and prepare a summary for the class using powerpoint slides or a handout, (b) provide a critical analysis of the paper (identifying both strengths and weaknesses), and (c) provide an overall assessment of the paper, thinking about directions/questions for future research and questions to generate class discussion.
+
+### Midterm project
+
+The midterm project will involve recording and analyzing your own speech and/or that of a friend, classmate or family member, analyzing VOT and vowel formants from a list of speech materials, and writing up a short paper.
+
+### Final project
+
+For your final project, you will be required to design and carry out a short 'pilot' phonetic experiment investigating one of the topics discussed in the class or a phonetic topic of your choice, and writing up a short experimental paper.
+
+### Assignment Submission:
+
+Unless otherwise noted, all assignments for this course must be submitted online using eClass. Links for individual assignments will be made available throughout the course.
+
+Annotated bibliography entries must be submitted by 11:59pm each Mondy before class using the eClass interface. Late submissions will automatically receive a 50% deduction (1 point out of 2) unless you have arranged for an extension, but may be submitted up until the end of the course for partial credit.
+
+Perusall comments/questions/replies must be submitted by 11:59 each Monday before class using the Perusall interface. Late submissions will automatically receive a 50% deduction (1 point out of 2) unless you have arranged for an extension, but may be submitted up until the end of the course for partial credit.
+
+All other assignments are due by 11:59pm on the Tuesday that they are due. I will not take any deductions for late assignments, but it is in your best interest to complete and submit your assignments in a timely fashion, as skills developed in the assignments will be necessary to succeed as the course progresses.
+
+## Grading
+
+York University uses a grading system detailed [here](http://calendars.registrar.yorku.ca/2012-2013/academic/grades/). Please familiarize yourself with it.
+
+## Academic Honesty and Integrity
+
+York students are required to maintain high standards of academic integrity and are subject to the Senate Policy on Academic Honesty. Please review the documents available [here](https://www.yorku.ca/secretariat/policies/policies/academic-honesty-senate-policy-on/). Academic offences are treated very seriously, and the disciplinary procedures are described there as well. Please consult the code if you have any question about the nature of academic offences and their penalties.
+
+## Schedule
+```{r}
+schedule <-read.csv("schedule.csv", header =TRUE)
+kable(schedule, "html")
+```

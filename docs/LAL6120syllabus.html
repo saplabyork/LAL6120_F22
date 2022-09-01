@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>LAL6120syllabus</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">LAL6120</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="lecture1.html">Lecture 1</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">LAL6120syllabus</h1>
+
+</div>
+
+
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+</style>
+<style type="text/css">
+.title {
+  display: none;
+}
+
+#getting-started img {
+  margin-right: 10px;
+}
+
+</style>
+<div id="lal-6120-phonetic-and-phonological-analysis"
+class="section level1">
+<h1><strong>LAL 6120: Phonetic and Phonological Analysis</strong></h1>
+<p>Wednesdays, 2:30pm, Calumet College, Rm.318<br />
+Instructor: <a href="https://ch-narayan.github.io">Chandan
+Narayan</a><br />
+Office hours: Tuesdays and Thursdays 10-11am <a
+href="https://yorku.zoom.us/j/97755816919?pwd=L1krNjJlUm9TL2RWWE1HWnZwNXZLQT09">Zoom
+link</a><br />
+Course website: ## Course Outline and Schedule</p>
+<hr />
+<div id="course-description" class="section level2">
+<h2>Course description:</h2>
+<p>This course provides a graduate-level introduction to phonetics and
+phonology. We will cover some basics of acoustic phonetics and take a
+deep dive into a few phonological feature and their acoustic-phonetic
+manifestation. We will also be reading primary research in phonetics and
+speech perception and discussing their role in the shaping of sound
+systems and the directions of phonological change. Throughout the course
+students will be introduced to instrumental techniques in phonetics
+(using PRAAT) and some basics of analyzing data using the R statistical
+software. The course culminates in students conducting their own mini
+phonetics experiment.</p>
+<!-- ## Course prerequisites: -->
+<!-- LING 1000 and PSYC 1010. This class is predicated on your knowing some fundamental concepts in Linguistics and/or Psychology. Therefore, you must have all the prerequisite courses in order to take this class. Special exceptions are made on a case-by-case basis. -->
+</div>
+<div id="learning-outcomes" class="section level2">
+<h2>Learning outcomes:</h2>
+<ol style="list-style-type: decimal">
+<li>Develop a basic knowledge of acoustic phonetics, speech perception,
+and their relationship to phonological patterns</li>
+<li>Develop skills in the critical analysis of research papers in
+acoustic phonetics and speech perception</li>
+<li>Develop basic practical skills in speech acoustic analysis using
+Praat and data analysis using R</li>
+<li>Design and carry out an original research project in phonetics and
+phonology</li>
+<li>Understand the steps involved in receiving ethics approval for a
+research project involving human participants</li>
+</ol>
+</div>
+<div id="evaluation" class="section level2">
+<h2>Evaluation</h2>
+<p>Your grade in the course will be determined by your performance on
+the following:</p>
+<ul>
+<li>Annotated bibliographies: 10%</li>
+<li>Assignments: 20% (2 x 10%)</li>
+<li>Presentations: 10% (2 x 5%)</li>
+<li>Midterm project: 20%</li>
+<li>Final proj: 35%</li>
+<li>Participation/Perusall: 5%</li>
+</ul>
+</div>
+<div id="course-text-and-readings" class="section level2">
+<h2>Course text and readings</h2>
+<p>All readings will be made available on the course <a
+href="https://saplabyork.github.io/LAL6120_F22">website</a>. Students
+may find these additional/recommended readings useful, though they are
+<strong>not required</strong> reading:</p>
+<blockquote>
+<p>Johnson, K. (2011), <em>Acoustic and Auditory Phonetics</em> (Wiley)
+Winter, B. (2020), <em>Statistics for Linguists: An Introduction Using
+R</em> (Routledge)</p>
+</blockquote>
+</div>
+<div id="eclass" class="section level2">
+<h2>eClass</h2>
+<p>I will be recording our in-class demos which will be made available
+via the <a href="http://eclass.yorku.ca">eClass</a> site for the course.
+Additionally, all submissions will be made through eClass.</p>
+<div id="lecture-notes" class="section level3">
+<h3>Lecture notes</h3>
+<p>Every week’s discussion will be accompanied by <a
+href="%22docs/index.html%22">notes</a>. NARAYAN-XW726</p>
+</div>
+<div id="annotated-bibliography" class="section level3">
+<h3>Annotated bibliography</h3>
+<p>For most classes (except for weeks 1, 5, and 12), you will be
+required to write an annotated bibliography entry for the required
+readings for that week’s class. This includes: (a) summary of the
+article (minimum 1-2 paragraphs), (b) discussion/reaction, and (c)
+discussion questions. These must be submitted each week by Monday at
+11:59pm on eClass, so that the questions can be integrated into the
+discussion for each Wednesday class. Marking will be based on a score
+out of 2: 2/2 (excellent; shows thoughtful discussion and attempt at
+understanding), 1/2 (assignment complete but with minimal effort or
+submitted late), 0/2 (not submitted). Submission of late assignments
+without a valid excuse will entail an automatic 1-point (50%) deduction
+per assignment. Late assignments will be accepted up until the last day
+of class.</p>
+</div>
+<div id="perusall-contributions" class="section level3">
+<h3>Perusall contributions</h3>
+<p>The online tool <a href="http://perusall.com">Perusall</a> will be
+used in this class to help stimulate class discussions online and help
+with your own reading of the assigned papers. Please set up an account
+at Perusall and use NARAYAN-XW726 for the course code.</p>
+<p>Perusall allows us to collaboratively annotate the readings online;
+for example, students can add comments/questions to specific parts of a
+reading and you can respond to other students’ comments/questions. To
+get credit for Perusall contributions, students are required to add at
+least one comment/question and respond to at least one comment/question
+for each week’s reading. Responses do not need to provide the answer,
+even echoing/elaborating on another student’s question is sufficient;
+however, they must be more substantive that ‘I agree’—you need to think
+about why. Marking is based on a score of 2: 2/2 (excellent; thoughtful
+comment + response), 1/2 (incomplete or marginal comment and/or
+response), 0/2 (not submitted or marginal comment + response).</p>
+</div>
+<div id="class-structure" class="section level3">
+<h3>Class structure</h3>
+<p>The structure of each class is highly variable, but will be very much
+driven by the students. Each week we will be discussing a theme and a
+paper going along with that theme. Classes will consist of (a) hands-on
+practice doing acoustic analysis using Praat, (b) analysis of phonetic
+data using R, (c) discussion of readings and articles, and (d)
+presentations by students.</p>
+</div>
+<div id="participation" class="section level3">
+<h3>Participation</h3>
+<p>Students are expected to attend and be prepared for every class.
+Students must complete each reading and assignment before class each
+week. The annotated bibliography and Perusall assignments are designed
+to guide you in your reading and understanding of the material. Students
+are expected to contribute to weekly discussions by answering questions,
+posing their own questions, offering solutions to problems, etc.</p>
+</div>
+<div id="email-policy" class="section level3">
+<h3>Email policy</h3>
+<p>If you cannot attend the scheduled office hour, contact me to arrange
+another time. I will do my best to answer your phone and email messages
+promptly. I do not, generally, answer email on the weekend. Please email
+me from your yorku.ca account and put ‘LAL 6120’ in the subject line.
+Emails sent from non-York accounts will be ignored. Please sign your
+emails; I will not reply to anonymous messages. My response to your
+email may be brief and may not come within 48 hours. <strong>Please be
+patient</strong>.</p>
+</div>
+<div id="tech" class="section level3">
+<h3>Tech</h3>
+<p>Throughout the course, we will integrate discussion of theoretical
+topics with the development of skills in acoustic phonetics. We will
+primarily be using a free, cross-platform computer program called Praat
+(<a href="http://www.fon.hum.uva.nl/praat/"
+class="uri">http://www.fon.hum.uva.nl/praat/</a>). We will also be using
+the <strong>R</strong> statistical software to analyze and visualize
+data via the desktop tool called R-Studio (<a
+href="https://www.rstudio.com/"
+class="uri">https://www.rstudio.com/</a>), which is free and open-source
+program. If you have a laptop, you will be encouraged to bring it to
+class with you on those days in which we will be doing demos in order to
+follow along. At various points in the semester, we will also discuss
+techniques for audio recording, and get practice recording your own
+voice and possibly that of friends or family members. You will need to
+have access to a headset or external microphone that can plug into your
+laptop or tablet/phone so that you can record your own voice (or
+possibly that of a friend or family member). Please get in touch with me
+should you not have either a computer or access to a microphone as the
+SAP Lab will have some to loan.</p>
+</div>
+<div id="ethics" class="section level3">
+<h3>Ethics</h3>
+<p>As part of this course, students will record and analyze audio
+recordings of their voice and possibly those of family or friends. All
+research at York involving human participants requires ethics clearance,
+and as part of this, all students in this course are required to
+complete the TCPS2 tutorial on research ethics, which can be completed
+online in about 3 hours (<a
+href="https://ethics.gc.ca/eng/education_tutorial-didacticiel.html"
+class="uri">https://ethics.gc.ca/eng/education_tutorial-didacticiel.html</a>).
+Students are required to submit your certificate to me by email by
+September 28. Note that if you completed this tutorial elsewhere, you do
+not need to complete it again; just download and send me your
+certificate.</p>
+</div>
+<div id="assignments" class="section level3">
+<h3>Assignments</h3>
+<p>Homework assignments will primarily aim to develop skills in acoustic
+analysis, and will involve the analysis of prepared data. Submission of
+assignments will be via eClass.</p>
+<p>###Article presentations Each student will present two papers during
+the term. Paper 1 (Week 5): presentation of one short paper from JASA
+(Journal of the Acoustical Society of America) or Journal of Phonetics
+(or similar) on the analysis of VOT or vowel formants. Paper 2 (Weeks
+7-10): presentation of one paper on a topic your choice, pre-approved by
+me at least one week before your presentation. When presenting your
+papers, you are asked to (a) thoroughly read the paper and prepare a
+summary for the class using powerpoint slides or a handout, (b) provide
+a critical analysis of the paper (identifying both strengths and
+weaknesses), and (c) provide an overall assessment of the paper,
+thinking about directions/questions for future research and questions to
+generate class discussion.</p>
+</div>
+<div id="midterm-project" class="section level3">
+<h3>Midterm project</h3>
+<p>The midterm project will involve recording and analyzing your own
+speech and/or that of a friend, classmate or family member, analyzing
+VOT and vowel formants from a list of speech materials, and writing up a
+short paper.</p>
+</div>
+<div id="final-project" class="section level3">
+<h3>Final project</h3>
+<p>For your final project, you will be required to design and carry out
+a short ‘pilot’ phonetic experiment investigating one of the topics
+discussed in the class or a phonetic topic of your choice, and writing
+up a short experimental paper.</p>
+</div>
+<div id="assignment-submission" class="section level3">
+<h3>Assignment Submission:</h3>
+<p>Unless otherwise noted, all assignments for this course must be
+submitted online using eClass. Links for individual assignments will be
+made available throughout the course.</p>
+<p>Annotated bibliography entries must be submitted by 11:59pm each
+Mondy before class using the eClass interface. Late submissions will
+automatically receive a 50% deduction (1 point out of 2) unless you have
+arranged for an extension, but may be submitted up until the end of the
+course for partial credit.</p>
+<p>Perusall comments/questions/replies must be submitted by 11:59 each
+Monday before class using the Perusall interface. Late submissions will
+automatically receive a 50% deduction (1 point out of 2) unless you have
+arranged for an extension, but may be submitted up until the end of the
+course for partial credit.</p>
+<p>All other assignments are due by 11:59pm on the Tuesday that they are
+due. I will not take any deductions for late assignments, but it is in
+your best interest to complete and submit your assignments in a timely
+fashion, as skills developed in the assignments will be necessary to
+succeed as the course progresses.</p>
+</div>
+</div>
+<div id="grading" class="section level2">
+<h2>Grading</h2>
+<p>York University uses a grading system detailed <a
+href="http://calendars.registrar.yorku.ca/2012-2013/academic/grades/">here</a>.
+Please familiarize yourself with it.</p>
+</div>
+<div id="academic-honesty-and-integrity" class="section level2">
+<h2>Academic Honesty and Integrity</h2>
+<p>York students are required to maintain high standards of academic
+integrity and are subject to the Senate Policy on Academic Honesty.
+Please review the documents available <a
+href="https://www.yorku.ca/secretariat/policies/policies/academic-honesty-senate-policy-on/">here</a>.
+Academic offences are treated very seriously, and the disciplinary
+procedures are described there as well. Please consult the code if you
+have any question about the nature of academic offences and their
+penalties.</p>
+</div>
+<div id="schedule" class="section level2">
+<h2>Schedule</h2>
+<pre class="r"><code>schedule &lt;-read.csv(&quot;schedule.csv&quot;, header =TRUE)
+kable(schedule, &quot;html&quot;)</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+Week
+</th>
+<th style="text-align:left;">
+Date
+</th>
+<th style="text-align:left;">
+Topic
+</th>
+<th style="text-align:left;">
+Reading
+</th>
+<th style="text-align:left;">
+Assignment
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Sep.7
+</td>
+<td style="text-align:left;">
+Intro to the course; Acoustics basics; Installing <a
+href="http://www.praat.org">Praat</a> and R
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Sep.14
+</td>
+<td style="text-align:left;">
+VOT 1; Working with Praat
+</td>
+<td style="text-align:left;">
+Lisker &amp; Abramson (1964)
+</td>
+<td style="text-align:left;">
+A
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Sep.21
+</td>
+<td style="text-align:left;">
+VOT 2: R basics
+</td>
+<td style="text-align:left;">
+Cho &amp; Ladefoged
+</td>
+<td style="text-align:left;">
+B
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+Sep.28
+</td>
+<td style="text-align:left;">
+Vowels
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+C
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Oct.5
+</td>
+<td style="text-align:left;">
+Fricatives; Basic analysis with R
+</td>
+<td style="text-align:left;">
+Jongman et al. 
+</td>
+<td style="text-align:left;">
+D
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:left;">
+Oct.12
+</td>
+<td style="text-align:left;">
+Reading week-NO CLASS
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+E
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Oct.19
+</td>
+<td style="text-align:left;">
+Student paper presentations
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+G
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+Oct.26
+</td>
+<td style="text-align:left;">
+Nasals, Nasalization
+</td>
+<td style="text-align:left;">
+Narayan
+</td>
+<td style="text-align:left;">
+H
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+Nov.2
+</td>
+<td style="text-align:left;">
+Coarticulation
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+i
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:left;">
+Nov.9
+</td>
+<td style="text-align:left;">
+Tone
+</td>
+<td style="text-align:left;">
+XXX
+</td>
+<td style="text-align:left;">
+J
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:left;">
+Nov.16
+</td>
+<td style="text-align:left;">
+Voice quality
+</td>
+<td style="text-align:left;">
+XXX
+</td>
+<td style="text-align:left;">
+K
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:left;">
+Nov.23
+</td>
+<td style="text-align:left;">
+XXX
+</td>
+<td style="text-align:left;">
+XXX
+</td>
+<td style="text-align:left;">
+L
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+Nov.30
+</td>
+<td style="text-align:left;">
+Final project presetations
+</td>
+<td style="text-align:left;">
+XXX
+</td>
+<td style="text-align:left;">
+M
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
