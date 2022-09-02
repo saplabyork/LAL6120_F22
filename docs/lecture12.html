@@ -314,7 +314,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">LING2200</a>
+      <a class="navbar-brand" href="index.html">LAL6120</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -322,55 +322,7 @@ div.tocify {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="lecture1.html">Lecture 1</a>
-</li>
-<li>
-  <a href="lecture2.html">Lecture 2</a>
-</li>
-<li>
-  <a href="lecture3.html">Lecture 3</a>
-</li>
-<li>
-  <a href="lecture4.html">Lecture 4</a>
-</li>
-<li>
-  <a href="lecture5.html">Lecture 5</a>
-</li>
-<li>
-  <a href="lecture6.html">Lecture 6</a>
-</li>
-<li>
-  <a href="lecture7.html">Lecture 7</a>
-</li>
-<li>
-  <a href="lecture8.html">Lecture 8</a>
-</li>
-<li>
-  <a href="lecture9.html">Lecture 9</a>
-</li>
-<li>
-  <a href="lecture10.html">Lecture 10</a>
-</li>
-<li>
-  <a href="lecture11.html">Lecture 11</a>
-</li>
-<li>
-  <a href="lecture12.html">Lecture 12</a>
-</li>
-<li>
-  <a href="lecture13.html">Lecture 13</a>
-</li>
-<li>
-  <a href="lecture14.html">Lecture 14</a>
-</li>
-<li>
-  <a href="lecture15.html">Lecture 15</a>
-</li>
-<li>
-  <a href="lecture16.html">Lecture 16</a>
-</li>
-<li>
-  <a href="lecture17.html">Lecture 17</a>
+  <a href="LAL6120syllabus.html">Syllabus/Schedule</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -395,10 +347,20 @@ div.tocify {
 }
 </style>
 <hr />
-<p>In today’s lab we get back to Praat and explore the <em>spectrogram</em>, which is a key analysis display for speech. Recall that we have been working with waveforms, which is a representation of speech as a fluctuation of air pressure across time. We also introduced the <em>spectrum</em> representation, which was a frequency x amplitude slice in time. We now build on these two representations with the <strong>spectrogram</strong>.</p>
+<p>In today’s lab we get back to Praat and explore the
+<em>spectrogram</em>, which is a key analysis display for speech. Recall
+that we have been working with waveforms, which is a representation of
+speech as a fluctuation of air pressure across time. We also introduced
+the <em>spectrum</em> representation, which was a frequency x amplitude
+slice in time. We now build on these two representations with the
+<strong>spectrogram</strong>.</p>
 <div id="the-spectrogram" class="section level1">
 <h1>The spectrogram</h1>
-<p>The spectrogram is essentially as spectrum representation with the addition of time. If you were to take the typical spectrum, like the one below, rotate it counterclockwise 90° then 90° towards you, then did that for ever spectral slice over time, you would have a spectrogram.</p>
+<p>The spectrogram is essentially as spectrum representation with the
+addition of time. If you were to take the typical spectrum, like the one
+below, rotate it counterclockwise 90° then 90° towards you, then did
+that for ever spectral slice over time, you would have a
+spectrogram.</p>
 <p align="center">
 <img src="images/spectrum_schwa.png" width="50%" height="50%">
 </p>
@@ -406,66 +368,130 @@ div.tocify {
 <p align="center">
 <img src="images/spectrum_schwa90.png" width="30%" height="30%">
 </p>
-<p>And now a few of them over time. But we’re essentially having to display a 3 dimensional representation (freq, time, amplitude) in 2D. How do we do this? The spectrogram uses the weight of the shading to represent the amplitude. The darker the color, the higher the amplitude.</p>
+<p>And now a few of them over time. But we’re essentially having to
+display a 3 dimensional representation (freq, time, amplitude) in 2D.
+How do we do this? The spectrogram uses the weight of the shading to
+represent the amplitude. The darker the color, the higher the
+amplitude.</p>
 <p align="center">
 <img src="images/spectrogram_sketch.png" width="50%" height="50%">
 </p>
-<p>Now examine the two spectrograms below. The one on the left is called a “narrow-band” spectrogram, and the on the right a “wide-band” spectrogram."</p>
+<p>Now examine the two spectrograms below. The one on the left is called
+a “narrow-band” spectrogram, and the on the right a “wide-band”
+spectrogram.”</p>
 <p align="center">
 <img src="images/narrow-band_spec.png" width="50%" height="50%"><img src="images/wide-band_spec.png" width="50%" height="50%">
 </p>
-<p>In order to generate a narrow-band spectrogram, we need to sample across a large window. For the image above, the window setting was 0.05s. This means that the program analyzes 0.05s of the signal as it samples it in X number of time steps. Let’s examine how we can do this.</p>
+<p>In order to generate a narrow-band spectrogram, we need to sample
+across a large window. For the image above, the window setting was
+0.05s. This means that the program analyzes 0.05s of the signal as it
+samples it in X number of time steps. Let’s examine how we can do
+this.</p>
 <ol style="list-style-type: decimal">
-<li>First download this wave file of me saying <a href="sounds/uhh.wav">uhhhh.</a></li>
-<li>Open the sound file into the Praat objects window, then click “View and Edit”.<span class="math inline">\(\rightarrow\)</span> this should give you a window with a waveform on top and some spectrogram representation below.</li>
-<li>From the View and Edit window, click Spectrum &gt; Spectrogram settings…</li>
+<li>First download this wave file of me saying <a
+href="sounds/uhh.wav">uhhhh.</a></li>
+<li>Open the sound file into the Praat objects window, then click “View
+and Edit”.<span class="math inline">\(\rightarrow\)</span> this should
+give you a window with a waveform on top and some spectrogram
+representation below.</li>
+<li>From the View and Edit window, click Spectrum &gt; Spectrogram
+settings…</li>
 </ol>
 <p align="center">
 <img src="images/spec_settings.png" width="50%" height="50%">
 </p>
-<p>Here we can play around with the specifications to change the resolution of the spectrogram. Direct your attention to the “Window length” setting. In this example, it’s 0.05s. Change it to 0.005s. This means the window of analysis is very small, so the program doesn’t have too much information to base it’s estimation of the frequency components of the sound. This would result in a “wide-band” spectrogram:</p>
+<p>Here we can play around with the specifications to change the
+resolution of the spectrogram. Direct your attention to the “Window
+length” setting. In this example, it’s 0.05s. Change it to 0.005s. This
+means the window of analysis is very small, so the program doesn’t have
+too much information to base it’s estimation of the frequency components
+of the sound. This would result in a “wide-band” spectrogram:</p>
 <p align="center">
 <img src="images/wide-band_spec.png" width="50%" height="50%">
 </p>
-<p>Notice how the “bands” are wide. The dark bands here are the formants. We estimate the numerical value of the formant by centering the cursor in the formant. We can have the program estimate the formants as well. Click Formant &gt; Show formants.</p>
+<p>Notice how the “bands” are wide. The dark bands here are the
+formants. We estimate the numerical value of the formant by centering
+the cursor in the formant. We can have the program estimate the formants
+as well. Click Formant &gt; Show formants.</p>
 <p align="center">
 <img src="images/wide-band_formants.png" width="50%" height="50%">
 </p>
-<p>But what exactly is the difference between these two window sizes? Look at the picture below and it will give you a sense of what the program is doing. We can set the number of time steps the program takes across the signal (or the number of samples). One convenient way to remember the difference between wide- and narrow-band is that the smaller the window, the wider the band. The bigger the window, the better the approximation of the harmonics, and so the more stripey look of the spectrogram.</p>
+<p>But what exactly is the difference between these two window sizes?
+Look at the picture below and it will give you a sense of what the
+program is doing. We can set the number of time steps the program takes
+across the signal (or the number of samples). One convenient way to
+remember the difference between wide- and narrow-band is that the
+smaller the window, the wider the band. The bigger the window, the
+better the approximation of the harmonics, and so the more stripey look
+of the spectrogram.</p>
 <p align="center">
 <img src="images/window_moving.jpeg" width="50%" height="50%">
 </p>
 </div>
 <div id="steady-state" class="section level1">
 <h1>Steady state</h1>
-<p>I want to introduce here the concept of <strong>steady state</strong> of the vowel. Notice in the spectrograms above the formants are relatively unchanging throughout the vowel. This is called the steady state portion of the vowel. This is possible because there is no consonant before and only a /h/ after (which is basically a vowel without vocal fold ocscillation). Vowels in real speech/words will have more or less of a steady state.</p>
-<p>Below is the word “but”. Notice that F1 and F2 start low (reflecting the bilabial closure) then F2 increases (reflecting the “t”).</p>
+<p>I want to introduce here the concept of <strong>steady state</strong>
+of the vowel. Notice in the spectrograms above the formants are
+relatively unchanging throughout the vowel. This is called the steady
+state portion of the vowel. This is possible because there is no
+consonant before and only a /h/ after (which is basically a vowel
+without vocal fold ocscillation). Vowels in real speech/words will have
+more or less of a steady state.</p>
+<p>Below is the word “but”. Notice that F1 and F2 start low (reflecting
+the bilabial closure) then F2 increases (reflecting the “t”).</p>
 <p align="center">
 <img src="images/but.png" width="50%" height="50%">
 </p>
-<p>Now, the question is, what is the F1/F2 of the vowel “uh” in “but”? Where do we measure it? It’s moments like this that we consider phonetics an “art.” If we look at the formant track, we notice there is a small region where the vowel is steady. This is the portion that is unaffected by the flanking consonants on either end of the vowel. It’s from here that we will take out formant measurements.</p>
+<p>Now, the question is, what is the F1/F2 of the vowel “uh” in “but”?
+Where do we measure it? It’s moments like this that we consider
+phonetics an “art.” If we look at the formant track, we notice there is
+a small region where the vowel is steady. This is the portion that is
+unaffected by the flanking consonants on either end of the vowel. It’s
+from here that we will take out formant measurements.</p>
 <p align="center">
 <img src="images/formant_steady.png" width="50%" height="50%">
 </p>
 </div>
 <div id="vowel-measuring" class="section level1">
 <h1>Vowel measuring</h1>
-<p>Many students working in phonetics labs end up measuring lots of vowels. What do we look for when measuring a vowel? We look for a steady state that’s unperturbed by consonants, as shown above. We generally report F1 and F2, but how do we get those? We can either inspect spectra (place your cursor in the steady state portion then generate a spectrum like you did in the previous lab/HW), or you can trust Praat’s algorithm to find F1 and F2 for you. Let’s go with the latter.</p>
+<p>Many students working in phonetics labs end up measuring lots of
+vowels. What do we look for when measuring a vowel? We look for a steady
+state that’s unperturbed by consonants, as shown above. We generally
+report F1 and F2, but how do we get those? We can either inspect spectra
+(place your cursor in the steady state portion then generate a spectrum
+like you did in the previous lab/HW), or you can trust Praat’s algorithm
+to find F1 and F2 for you. Let’s go with the latter.</p>
 <ol style="list-style-type: decimal">
-<li>Open the uhh.wav file. In this case we have a steady state. It might be convenient to get the “average” formant values in this case.</li>
+<li>Open the uhh.wav file. In this case we have a steady state. It might
+be convenient to get the “average” formant values in this case.</li>
 <li>Select a portion of the middle of the vowel.</li>
-<li>Formants &gt; Show formants, then Formants &gt; Get first formant. This will open a dialog box with the formant value in Hz.</li>
+<li>Formants &gt; Show formants, then Formants &gt; Get first formant.
+This will open a dialog box with the formant value in Hz.</li>
 </ol>
-<p>What if we wanted a measurement of the formant values at vowel onset and offset? Let’s do this with <a href="sounds/cut.wav">“cut”</a>.</p>
-<p>Here are more sounds to work with: <a href="sounds/dat.wav">dat</a>, <a href="sounds/dit.wav">dit</a>, <a href="sounds/duht.wav">duht</a>, <a href="sounds/dut.wav">dut</a></p>
-<div id="note-on-determining-vowel-onset-and-offset" class="section level2">
+<p>What if we wanted a measurement of the formant values at vowel onset
+and offset? Let’s do this with <a href="sounds/cut.wav">“cut”</a>.</p>
+<p>Here are more sounds to work with: <a href="sounds/dat.wav">dat</a>,
+<a href="sounds/dit.wav">dit</a>, <a href="sounds/duht.wav">duht</a>, <a
+href="sounds/dut.wav">dut</a></p>
+<div id="note-on-determining-vowel-onset-and-offset"
+class="section level2">
 <h2>Note on determining vowel onset and offset</h2>
-<p>There is really now hard and fast rule for determining the onset and offset of the vowel. What do we know about vowels? They’re complex period ic sounds, so one rule of thumb is that when the waveform starts to look periodic, we know we’re at the beginning of the vowel. Similarly for offset, when the waveform starts to look aperiodic or noisy or without much structure, then you’re likely at the offset. Your ears also tell you a lot about these landmarks. Trust them! In general you will want to measure the vowel at the zero crossing, but depending on your window size (if it’s small or large), you will want to take the measurement at either the first or second zero crossing.</p>
+<p>There is really now hard and fast rule for determining the onset and
+offset of the vowel. What do we know about vowels? They’re complex
+period ic sounds, so one rule of thumb is that when the waveform starts
+to look periodic, we know we’re at the beginning of the vowel. Similarly
+for offset, when the waveform starts to look aperiodic or noisy or
+without much structure, then you’re likely at the offset. Your ears also
+tell you a lot about these landmarks. Trust them! In general you will
+want to measure the vowel at the zero crossing, but depending on your
+window size (if it’s small or large), you will want to take the
+measurement at either the first or second zero crossing.</p>
 </div>
 </div>
 <div id="audio-samples-for-assignment-2" class="section level1">
 <h1>Audio samples for Assignment 2</h1>
-<p><a href="sounds/hide_heidi_heidel.wav">Hide, Heidi, Heidelberg</a></p>
+<p><a href="sounds/hide_heidi_heidel.wav">Hide, Heidi,
+Heidelberg</a></p>
 </div>
 
 

@@ -92,7 +92,12 @@ The diaphragm is sensitive to stomach contents moving around! When it's at rest,
   <img src="images/DiaphragmRespiration.gif" width="50%" height="50%">
 </p>
 \
-
+<p align="center">
+<video width="420" height="340" controls>
+  <source src="images/lungs.mp4" type="video/mp4">
+</video>
+</p>
+\
 ### Inspiration/Expiration 
 
 We have a naive notion of what actions actually go into the phenomenon of breathing. We think about "breathing in" as sucking in air through our nose or mouth, and "breathing out" as blowing, when in fact, it's the diaphragm that's doing the contracting which leads to the lungs getting filled with air. Why? Remember Boyle's law?

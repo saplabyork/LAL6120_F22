@@ -4,6 +4,8 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Lecture 1"
-      href: lecture1.html
+    - text: "Syllabus/Schedule"
+      href: LAL6120syllabus.html
+    - text: "Week 1: Acoustics basics"
+      href: acoustics_basics.html
 output_dir: "docs"

@@ -1,0 +1,398 @@
+---
+title: "Acoustics basics"
+output:
+  html_document:
+    includes:
+      in_header: "favicon.html"
+    theme: paper
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 2
+    #code_folding: hide
+---
+<style type="text/css">
+  body{
+  font-size: 12pt;
+}
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+options(repos = list(CRAN="http://cran.rstudio.com/"))
+```
+
+# Software installation
+This course introduces you to some basics of instrumental phonetic analysis. You will need the following two pieces of software:
+
+* Praat: Acoustic phonetic analysis software. It's free and available [here](http://www.praat.org). Please download it and follow the installation instructions. 
+* R Studio: R is a statistical analysis language and R Studio is the user interface which allows you to do a variety of things with data, like modeling and visualizing. We'll just scratch the outermost surface of what R allows you to do. But first you'll need to have the R software (R Studio sits on top of the basic R software!). Go [here](https://cran.rstudio.com/) to first download R onto your machine. Then download R Studio for free [here](https://www.rstudio.com/products/rstudio/download/#download). Here's a nice [video](https://www.youtube.com/watch?v=TFGYlKvQEQ4) that walks you through the process.
+
+# Acoustics basics
+
+Any course in phonetics will assume some basic understanding of how speech is produced and what the nature of the speech signal is like (i.e., what it's made of and how it relates to the vocal apparatus). These notes are meant to give you a brief introduction of the basics of acoustics as it relates to speech sounds. This by no means comprehensive and you should be encouraged to seek out explanations for more difficult questions you might have about the details of speech acoustics. The internet is your friend, but there are plenty of books which can help you along the way. Ask me and I can offer some suggestions. 
+
+***
+
+# The Speech Chain
+The speech chain represents the nature of communicating a linguistic message via the vocal-audition apparatus.
+
+<p align="center">
+  <img src="images/speech-chain.jpg">
+</p>
+
+
+In this course, we will be examining, in detail, the nature of:
+
+* **Acoustics**: the physical properties of sound
+* **Production**: the physical process of producing sounds
+* **Perception**: the psychological process of speech reception
+
+# Sound
+
+Sound is essentially changes in air pressure that results from some sort of disturbance, like the smacking of a table top or the vibrating of vocal folds. For speech sounds, tiny changes in pressure are a result of air molecules beign set in motion by the movement of the vocal folds. These changes in air pressure between air molecules end up at the listener's ear. This animated gif schematizes the general idea of some movement (the hand moving up) setting in to motion the rope. The change in air pressure is represented by the wave in the rope, which moves and ultimately reaches a target (or the listener's ear).
+
+![](https://ds055uzetaobb.cloudfront.net/uploads/RemWkGv8Lh-rope1.gif)
+
+Molecules of air move in a random pattern, called [Brownian motion](https://en.wikipedia.org/wiki/Brownian_motion) and collide with each other and other objects at a relatively constant pressure.
+
+<p align="center">
+  <img width="200" height="200" src="https://i.pinimg.com/originals/15/38/66/153866beb99a7ec456ae1e6b0d643aea.gif">
+</p>
+
+# Airflow
+
+Air moves from an area high pressure to an area of low pressure in order to equalize → driving pressure. Air only moves when there is a pressure differential between the areas. If there is no difference in pressure between the two areas, there is no airflow. This is very important for speech, as will become clearer when we discuss place and manner of articulation. 
+
+# Pressure
+## Boyle's Law
+
+Another important concept for our understanding of speech processes is that formulated by the English polymath, [Robert Boyle](https://en.wikipedia.org/wiki/Robert_Boyle). Boyle's law characterized the relationship between the pressure of a gas and the volume of its container.
+
+> Boyle's Law says that that pressure and volume are inversely related. The bigger the container, the lower the pressure; the smaller the container, the higher the pressure of the gas within. 
+
+<p align="center">
+  <img src="https://i.makeagif.com/media/9-27-2015/TnlTsV.gif">
+</p>
+
+For our purposes, it's useful to imagine the relationship between two containers, or the same container at different points in time. In the equation below, imagine a fixed mass of gas (ok, air). The relationship between the pressure of that gas and the volume of the container is constant. So increasing the volume would mean a decrease in pressure (so long as the mass of the gas is the same and the temperature doesn't change).
+
+> $$ P_1 V_1~ = P_2 V_2 $$ 
+
+<p align="center">
+  <img width="300" height="300" src="images/boylelaw.gif">
+</p>
+
+
+We know that there are air molecule pressure changes, cumulatively, involved when the volume of the container shrinks or expands, but what exactly happens between individual air molecules?
+
+## Compression/Rarefaction
+
+> When air molecules collide there is a moment of high pressure. This is called **compression**. The idea here is simple and can be roughly analogized to the Boyle's law examples above. Imagine the plunger and bottom wall of the piston are air molecules. As they approach each other (or are compressed), pressure between them increases.
+
+M~1~&rarr;&rarr;&rarr;&rarr;M~1~ M~2~\
+As M~1~ approaches M~2~ there is increasing pressure (compression)
+
+<p align="center">
+  <img height="150" width="500" src="images/compression.gif">
+</p>
+
+> When the molecule “bounces” back and overshoots its original position, it causes an area of low air density, resulting in low pressure → rarefaction
+
+M~1~ &larr; M~1~ &larr;&larr;&larr; M~2~\
+As M~1~ moves away from M~2~ there is decreasing pressure (rarefaction)
+
+Here is a nice [video demonstration](https://www.youtube.com/watch?v=bYoTRx6gGX0) and explanation of compression and rarefaction of air molecules.
+
+# Simple harmonic motion
+Simple harmonic motion (SHM) results when the restoring force on an object is proportional to the displacement from equilibrium in the opposite direction. SHM is a special type of periodic motion (we'll discuss periodicity below) that refers to the a back and forth motion that repeats itself at regular intervals.
+
+With SHM, there is acceleration of an object through the "zero point" or equilibrium and deceleration at the endpoints of the movement. In the animation below, the weight's equilibrium point (or the spring's natural length) would be represented by y=0.
+
+<p align="center">
+  <img src="images/pendulumshm.gif">
+</p>
+
+## Frequency
+One back and forth movement through the equilibriam point constitutes one *cycle* of vibration.When describing sound, these cycles refer to the movement of air molecules moving back and forth. When the molecule is set into motion (from some disturbance, like the movement of the vocal folds or the slamming of a door), it is propelled, reaches some maximum, travels back through its original starting point (equilibrium) and proceeds again in the direction opposite the one it initially travelled, then back again to equilibrium (one complete cycle). 
+
+This movement results in pressure changes. A cycle when describing sound is:
+
+> One cycle = increase in P from P~atm~ (compression), a decrease in P below to P~atm~ (rarefaction), then increase back to equilibrium
+> The number of cycles completed in one second is called the **frequency** and is measured in Hertz (Hz)
+
+For speech, we very often encounter frequencies in the thousands, so instead of writing, say, 5600 Hz, we might change the units to kilohertz (1000 Hz) giving us 5.6kHz.
+
+[Here](https://youtu.be/pANIvSh2r2A) is a strobe video of a tuning fork. The tines (or arms) of the fork vibrate in unison, moving away from equilibrium, reaching a maximum displacement, then back toward the center and beyond, then back again. 
+
+## Period
+
+> The **period** of a waveform is the time it takes for one cycle to occur
+
+Period is inversly proportional to frequency. So:
+$$F = 1/t ; t = 1/F$$
+If the frequency is 100Hz (or 100 cycles per second), then the period is 1/100 or 0.01 seconds. Period is symbolized as *t*.
+
+Here's a little practice question:
+If *t* = 0.003, then what is the frequency?
+<!-- Answer options go here -->
+<div class="radio">
+  <label>
+    <input type="radio" name="question01" id="opt1" value="33kHz" onchange="check_answer()">
+    33kHz 
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="question01" id="opt2" value="300Hz" onclick="check_answer()">
+    300Hz
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="question01" id="opt3" value="333kHz" onclick="check_answer()">
+    333kHz 
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="question01" id="opt3" value="333Hz" onclick="check_answer()">
+    333Hz 
+  </label>
+</div>
+<!-- Check answer button -->
+<div>
+<button class="btn btn-primary" type="button" onclick="check_answer()" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Show / Hide result</button>
+</div>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body" id="answerFeedback">
+    The answer selected was ...
+  </div>
+</div>
+
+<!-- Code to update answer feedback -->
+<script type="text/javascript">
+function check_answer()
+{
+    var radioButtons = document.getElementsByName("question01");
+    document.getElementById("answerFeedback").innerHTML = "Try selecting an answer!!";
+    for(var i = 0; i < radioButtons.length; i++)
+    {
+        if(radioButtons[i].checked == true)
+        {
+            var selectedAnswer = "Your selected answer was " + radioButtons[i].value;
+            <!-- feedback for correct / incorrect response -->
+            var feedback = "Not quite! Have another go." 
+            if(radioButtons[i].value == "333Hz") {
+              feedback = "Yup, good job! 1/0.003 = 333"
+            }
+            document.getElementById("answerFeedback").innerHTML = selectedAnswer + "<br>" + feedback;
+            return true;
+        }
+    }
+}
+</script>
+\
+
+## Wavelength
+The distance completed by one complete cycle of the sound wave is called its **wavelength (λ)**. Wavelength is given in *m* or *cm*. The higher the F, the shorter the period (remember F=1/t) and wavelength. Conversely, the lower the F, the longer the period and wavelength.
+
+<p align="center">
+  <img src="images/wavelength.png">
+</p>
+
+## Velocity
+
+Just how fast a sound wave moves (or its **velocity**) depends upon the nature of the medium, the substance in which the wave is moving (e.g., air, water, concrete). Denser media allow sounds to travel faster, so sound travels faster in water (than air), and even faster in steel or concrete.
+
+Temperature also affects the velocity of sound, though not so much in liquids and solids. As temperature increases so too does the velocity of the sound wave. So, in warmer air, the velocity of sound increases at a rate of 0.6m/s /deg C.
+
+The "speed of sound" (v) is roughly 330 m/s. (Be **very careful** with the units of v as some questions will require you to convert!) There is a **very important** relationship between frequency and wavelength, which relies on v: 
+$$F = v/λ$$
+
+## Amplitude
+
+In our description of period, frequency, and wavelength we have (till now) ignored a very important component of our sound wave, namely the displacement of the wave from equilibrium. Remember we referred to "maximum displacement" above? 
+
+This maximum *height* of the wave, above and below the equilibrium point, is called **amplitude**. For practical purposes (which we'll spend some time discussing later in the course), the amplitude corresponds to the loudness of a sound. Amplitude is measured in bels or decibels (bel/10).
+
+# Pure and complex sounds
+
+A sound can be composed of one or more frequencies $\rightarrow$ remember that these frequencies represent the movement of the sound wave (itself made up of the movement of air molecules)
+
+## Pure tones
+
+If a sound consists of a single frequency it is called a **pure tone**. A pure tone can be described by **simple harmonic motion**, which is depicted as a sine wave, with a frequency, period, wavelength, etc. Here is an example of a [pure tone](sounds/440Hz.wav), one where one complete cycle of the wave repeats itself 440 times per second (or with a frequency of 440 Hz). Below is an image of the waveform depicting the 440 (I did this in Praat...can you?):
+
+<p align="center">
+  <img src="images/440sine.png" width="70%" height="70%">
+</p>
+
+Musicians among you may know this tone as the note "A" in a Western traditional 12-tone scale system. If you have a piano or keyboard nearby, play this tone, then the "A" key. Are they the same note? How does your piano (or any other in-tune instrument) sound different from the tone?
+
+<p align="center">
+  <img src="images/a440.jpeg" width="75%" height="75%">
+</p>
+
+
+Listen to the two sounds one after the other:
+
+<audio controls>
+    <source src="sounds/a-piano.mp3" type="audio/wav"/>
+</audio>
+<audio controls>
+  <source src="sounds/440Hz.wav" type="audio/wav"/>
+</audio>
+\
+
+## Complex sounds
+
+A note struck on the piano *does* sound different from the pure tone above. The reason it sounds different is because the vibrating metal string in the piano, when struck, produces the 440Hz tone *as well* as other tones (called "overtones") resulting in a **complex sound**. The complexity of the sound contributes to the overall *voice* of the instrument (or "timbre"). Complex sounds can be either **periodic** or **aperiodic**. 
+
+### Periodic sounds
+
+A complex periodic sound would be like notes playes from an instrument or even vowel sounds coming out of your mouth!
+
+<figure align="center">
+  <img src="images/complex_periodic_vowel.png" width="70%" height="70%">
+  <figcaption>Periodic complex sound--Vowel.</figcaption>
+</figure>
+\
+Here is a ["middle C"](sounds/middle_C.mp3) from a piano (also a complex periodic wave). Can you identify one complete cycle (or period)?\
+<figure align="center">
+  <img src="images/middle-c.png" width="70%" height="70%">
+  <figcaption>Periodic complex sound--Piano, Middle C</figcaption>
+</figure>
+\
+
+Here's a little practice question testing your understanding of frequency in periodic sounds.
+
+#### Practice----
+What is the frequency of the Middle C piano note above? You can calculate it from the waveform given.
+<!-- Answer options go here -->
+<div class="radio">
+  <label>
+    <input type="radio" name="question01" id="opt1" value="440Hz" onchange="check_answer()">
+    440Hz 
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="question01" id="opt2" value="260kHz" onclick="check_answer()">
+    260kHz
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="question01" id="opt3" value="262.23kHz" onclick="check_answer()">
+    262Hz 
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="question01" id="opt3" value="262.24Hz" onclick="check_answer()">
+    262.24Hz 
+  </label>
+</div>
+<!-- Check answer button -->
+<div>
+<button class="btn btn-primary" type="button" onclick="check_answer()" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Show / Hide result</button>
+</div>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body" id="answerFeedback">
+    The answer selected was ...
+  </div>
+</div>
+
+<!-- Code to update answer feedback -->
+<script type="text/javascript">
+function check_answer()
+{
+    var radioButtons = document.getElementsByName("question01");
+    document.getElementById("answerFeedback").innerHTML = "Try selecting an answer!!";
+    for(var i = 0; i < radioButtons.length; i++)
+    {
+        if(radioButtons[i].checked == true)
+        {
+            var selectedAnswer = "Your selected answer was " + radioButtons[i].value;
+            <!-- feedback for correct / incorrect response -->
+            var feedback = "Not quite! Have another go." 
+            if(radioButtons[i].value == "262.24Hz") {
+              feedback = "Yup, good job! 3 cycles / 0.01144 seconds = 262.24Hz"
+            }
+            document.getElementById("answerFeedback").innerHTML = selectedAnswer + "<br>" + feedback;
+            return true;
+        }
+    }
+}
+</script>
+
+----
+### Aperiodic sounds
+
+Aperiodic sounds are not periodic (or quasi-periodic); the waveform does not show any repeating quality (or periodicity). There are two types of aperiodic sounds: 
+
+* Aperiodic sounds are sounds that do not repeat
+* Aperiodic sounds are of two types: a **transient** sound or a sound that occurs just once, for a very short time (e.g., a hand clap, a balloon pop, or even one cycle of a sine wave!); a **noise** sound where the pressure at each moment is random and does not depend on the previous moment (e.g., a tire leaking air or [static](sounds/noise.wav) on the radio)
+
+<figure align="center">
+  <img src="images/noise.png" width="70%" height="70%">
+  <figcaption>Aperiodic noise--radio static from above</figcaption>
+</figure>
+
+\
+
+## Complex periodic sounds
+
+Periodic complex sounds are made up of frequencies of sound that are *systematically* related to each other:
+
+* The lowest frequency is called the **Fundamental Frequency**. The fundamental frequency is abbreviated ***F~0~***. The fundamental frequency is based on the periodicity of the entire complex sound. The fundamental frequency is not just the frequency of the **lowest component of the complex sound**.
+
+* Frequencies above ***F~0~*** are called **harmonics**. For a complex periodic sounds, harmonics are the whole number integer (or a number that can be written down without a fraction part, e.g., 35, 5, 28374) multiples of the fundamental frequency.  
+
+For most **naturally** generated complex periodic sounds (like guitar strings, tuning forks, etc.), the source generating the sound vibrates at the fundamental frequency AND at each integer multiple of the F~0~. So, for example, if the F~0~ of a tuning fork is 350Hz (ie., the tines of the fork vibrate back and forth 350 times every sec), it also vibrates at 2 x 350Hz, 3 x 350Hz, 4 x 350Hz, 5 x 350Hz, etc. $\rightarrow$ harmonics. The amplitude (we'll get to this later) of each harmonic decreases. So the loudest harmonic is the first one, the F~0~.
+
+<figure align="center">
+  <img src="images/harmonics_sine.png" width="70%" height="70%">
+  <figcaption>Fundamental (50Hz) and harmonics</figcaption>
+</figure>
+\
+
+### Fourier analysis
+
+The complex periodic sound is the sum of many simple periodic tones. So in the picture above, the resulting sound of the tone complex is literally computed by adding each sine wave together. The discovery that a complex periodic sound is the sum of multiple simple tones is called *Fourier Analysis*, named after the person who discovered it, [Joseph Fourier](https://en.wikipedia.org/wiki/Joseph_Fourier).
+
+<figure align="center">
+  <img src="images/harmonic_waveforms.png" width="70%" height="70%">
+  <figcaption>The addition of harmonics results in the complex waveform.</figcaption>
+</figure>
+\
+
+## Spectrum
+
+Waveforms can be displayed in many ways. We've seen how this looks above $\rightarrow$ conveys information about frequency, period, and amplitude but NO information about the components (harmonics in periodic sounds). 
+
+A **spectrum** (or more technically the **line spectrum** in this case) view, however, provides information about the amplitude of the the individual frequencies making up the complex periodic sound.
+
+<figure align="center">
+  <img src="images/Spectrum1.gif" width="50%" height="50%">
+  <figcaption>Basic line spectrum of 100Hz complex periodic sound. Notice the harmonics at whole integer multiples of the fundamental frequency.</figcaption>
+</figure>
+\
+
+* Line spectra represent a "slice" of the sound in the frequency domain. The x-axis represents frequency and the y-axis represents how much energy is in that frequency, or **amplitude**. Wait, but sound happens over time! What happened to the time dimension, like in a waveform? $\rightarrow$ the frequencies themselves must have time built in, so the line spectrum must occur over some interval of time.
+
+In the line spectrum above, the F~0~ is 100Hz (represented by the first vertical line). The line is at 100 on the x-axis, and the height of the line represents the amplitude of that component. In this case, the F~0~ is the loudest component. The next component is at 2 x 100Hz or 200Hz, with a component at 300, 400, 500Hz, etc. Notice that each harmonic is lower in amplitude relative to the next lower harmonic $\rightarrow$ this is a feature of naturally vibrating sources. 
+
+* In a spectrum representation of of sound, there must be some time "chunk" over which the spectrum is computed. We'll learn how to do this in Praat.
+
+* Line spectra are NOT used for complex *aperiodic* sounds, which are characterized by energy across broad bands of frequencies. 
+
+* Aperiodic spectra would have closely spaced lines with no systematic relationship with each other. The sound is best represented by something called a *spectral envelope* which shows the general shape of the amplitudes of the collective frequencies in the sound.
+
+<figure align="center">
+  <img src="images/aperiodic_spectrum.png" width="50%" height="50%">
+  <figcaption>Spectrum of aperiodic random noise</figcaption>
+</figure>
+\

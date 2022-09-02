@@ -7,6 +7,8 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(tidyverse)
 install.packages("kableExtra",repos = "http://cran.us.r-project.org")
 library(kableExtra)
 ```
@@ -114,7 +116,8 @@ As part of this course, students will record and analyze audio recordings of the
 
 Homework assignments will primarily aim to develop skills in acoustic analysis, and will involve the analysis of prepared data. Submission of assignments will be via eClass.
 
-###Article presentations Each student will present two papers during the term. Paper 1 (Week 5): presentation of one short paper from JASA (Journal of the Acoustical Society of America) or Journal of Phonetics (or similar) on the analysis of VOT or vowel formants. Paper 2 (Weeks 7-10): presentation of one paper on a topic your choice, pre-approved by me at least one week before your presentation. When presenting your papers, you are asked to (a) thoroughly read the paper and prepare a summary for the class using powerpoint slides or a handout, (b) provide a critical analysis of the paper (identifying both strengths and weaknesses), and (c) provide an overall assessment of the paper, thinking about directions/questions for future research and questions to generate class discussion.
+### Article presentations 
+Each student will present two papers during the term. Paper 1 (Week 5): presentation of one short paper from JASA (Journal of the Acoustical Society of America) or Journal of Phonetics (or similar) on the analysis of VOT or vowel formants. Paper 2 (Weeks 7-10): presentation of one paper on a topic your choice, pre-approved by me at least one week before your presentation. When presenting your papers, you are asked to (a) thoroughly read the paper and prepare a summary for the class using powerpoint slides or a handout, (b) provide a critical analysis of the paper (identifying both strengths and weaknesses), and (c) provide an overall assessment of the paper, thinking about directions/questions for future research and questions to generate class discussion.
 
 ### Midterm project
 
@@ -143,7 +146,10 @@ York University uses a grading system detailed [here](http://calendars.registrar
 York students are required to maintain high standards of academic integrity and are subject to the Senate Policy on Academic Honesty. Please review the documents available [here](https://www.yorku.ca/secretariat/policies/policies/academic-honesty-senate-policy-on/). Academic offences are treated very seriously, and the disciplinary procedures are described there as well. Please consult the code if you have any question about the nature of academic offences and their penalties.
 
 ## Schedule
-```{r}
+```{r, echo=FALSE}
 schedule <-read.csv("schedule.csv", header =TRUE)
-kable(schedule, "html")
+options(knitr.kable.NA = '')
+schedule %>%
+  kbl() %>%
+  kable_material(c("striped","hover"))
 ```

@@ -314,7 +314,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">LING2200</a>
+      <a class="navbar-brand" href="index.html">LAL6120</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -322,55 +322,7 @@ div.tocify {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="lecture1.html">Lecture 1</a>
-</li>
-<li>
-  <a href="lecture2.html">Lecture 2</a>
-</li>
-<li>
-  <a href="lecture3.html">Lecture 3</a>
-</li>
-<li>
-  <a href="lecture4.html">Lecture 4</a>
-</li>
-<li>
-  <a href="lecture5.html">Lecture 5</a>
-</li>
-<li>
-  <a href="lecture6.html">Lecture 6</a>
-</li>
-<li>
-  <a href="lecture7.html">Lecture 7</a>
-</li>
-<li>
-  <a href="lecture8.html">Lecture 8</a>
-</li>
-<li>
-  <a href="lecture9.html">Lecture 9</a>
-</li>
-<li>
-  <a href="lecture10.html">Lecture 10</a>
-</li>
-<li>
-  <a href="lecture11.html">Lecture 11</a>
-</li>
-<li>
-  <a href="lecture12.html">Lecture 12</a>
-</li>
-<li>
-  <a href="lecture13.html">Lecture 13</a>
-</li>
-<li>
-  <a href="lecture14.html">Lecture 14</a>
-</li>
-<li>
-  <a href="lecture15.html">Lecture 15</a>
-</li>
-<li>
-  <a href="lecture16.html">Lecture 16</a>
-</li>
-<li>
-  <a href="lecture17.html">Lecture 17</a>
+  <a href="LAL6120syllabus.html">Syllabus/Schedule</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -394,24 +346,45 @@ div.tocify {
   font-size: 12pt;
 }
 </style>
-<p>Today’s Praat lab will introduce you to pure and complex tone synthesizing in Praat. You’ll need to know this to complete Assignment 1.</p>
+<p>Today’s Praat lab will introduce you to pure and complex tone
+synthesizing in Praat. You’ll need to know this to complete Assignment
+1.</p>
 <div id="creating-a-pure-tone-in-praat" class="section level1">
 <h1>Creating a pure tone in Praat</h1>
-<p>By now you should have all downloaded and explored the Praat analysis sfotware. If you haven’t done so, please download it ASAP <a href="https://www.praat.org">here</a>.</p>
-<p>The purpose of today’s lab is to produce and examine the characteristics of pure and complex tones discussed in lectures 1-3. Recall that we use the term “pure tone” to describe a sound that has the attributes of simple harmonic motion (in this case of an air molecule): period, frequency, wavelength, and amplitude.</p>
+<p>By now you should have all downloaded and explored the Praat analysis
+sfotware. If you haven’t done so, please download it ASAP <a
+href="https://www.praat.org">here</a>.</p>
+<p>The purpose of today’s lab is to produce and examine the
+characteristics of pure and complex tones discussed in lectures 1-3.
+Recall that we use the term “pure tone” to describe a sound that has the
+attributes of simple harmonic motion (in this case of an air molecule):
+period, frequency, wavelength, and amplitude.</p>
 <div id="the-sine-wave-equation" class="section level2">
 <h2>The sine wave equation</h2>
-<p>The function that generates a sine wave (or a pure tone, simple harmonic motion, etc.) captures amplitude (A), and the frequency(f):</p>
+<p>The function that generates a sine wave (or a pure tone, simple
+harmonic motion, etc.) captures amplitude (A), and the frequency(f):</p>
 <p><span class="math display">\[\begin{equation}
 y(x) = A \times sin(2\pi fx)
 \end{equation}\]</span></p>
-<p>Why <span class="math inline">\(2\pi\)</span>? The period of the sine function is <span class="math inline">\(2\pi\)</span>, which means that the value of the function is the same every <span class="math inline">\(2\pi\)</span> radians, which is a unit of angular measurement. So the curve varies over <span class="math inline">\(2\pi\)</span> radians over the course of one period(t). So because <span class="math inline">\(f=\frac{1}{t}\)</span> the sine formula above can be re-written as <span class="math inline">\(sin(\frac{2\pi}{t}x)\)</span>.</p>
+<p>Why <span class="math inline">\(2\pi\)</span>? The period of the sine
+function is <span class="math inline">\(2\pi\)</span>, which means that
+the value of the function is the same every <span
+class="math inline">\(2\pi\)</span> radians, which is a unit of angular
+measurement. So the curve varies over <span
+class="math inline">\(2\pi\)</span> radians over the course of one
+period(t). So because <span class="math inline">\(f=\frac{1}{t}\)</span>
+the sine formula above can be re-written as <span
+class="math inline">\(sin(\frac{2\pi}{t}x)\)</span>.</p>
 </div>
 <div id="synthesizing-a-pure-tone" class="section level2">
 <h2>Synthesizing a pure tone</h2>
-<p>OK, so let’s say we want to create a pure tone in Praat. Praat allows you to do this using a fill-in window were you specify the frequency and hit a button and there you go. <em>But</em> we’re not going to do it this way. Suppose we want to make a 3 second 377Hz tone:</p>
+<p>OK, so let’s say we want to create a pure tone in Praat. Praat allows
+you to do this using a fill-in window were you specify the frequency and
+hit a button and there you go. <em>But</em> we’re not going to do it
+this way. Suppose we want to make a 3 second 377Hz tone:</p>
 <ol style="list-style-type: decimal">
-<li>From the Praat Objects window &gt; New &gt; Create sound from formula<br />
+<li>From the Praat Objects window &gt; New &gt; Create sound from
+formula<br />
 This brings up the a window that looks like this:</li>
 </ol>
 <p align="center">
@@ -422,13 +395,22 @@ This brings up the a window that looks like this:</li>
 <ol start="2" style="list-style-type: decimal">
 <li><p>Things to look at:</p>
 <ul>
-<li>Name–you should change this to something that describes your sound. In this case, let’s change it “377Hz”</li>
-<li>Start/end times–We want a 3 second tone, so start at 0, end at 3</li>
+<li>Name–you should change this to something that describes your sound.
+In this case, let’s change it “377Hz”</li>
+<li>Start/end times–We want a 3 second tone, so start at 0, end at
+3</li>
 <li>For now ignore the sampling rate</li>
 </ul></li>
-<li><p>The most important field is “Formula.” Notice it says “1/2 * sin(2 * pi * 377 * x)” by default (the spaces don’t matter). It also says “+ randomGauss(0,0.1)”, which you can select and delete. What that does is add random noise to the pure tone signal.</p></li>
-<li><p>Compare the formula to the in the Formula field to the one above. Notice the similarities? The default formula has A = 1/2 and a frequency of 377Hz. You can change the frequency to anything you want, but for now let’s just work with the default. Name the object “377Hz.”</p></li>
-<li><p>This will put an object called “377Hz” in your Objects window.</p></li>
+<li><p>The most important field is “Formula.” Notice it says “1/2 *
+sin(2 * pi * 377 * x)” by default (the spaces don’t matter). It also
+says “+ randomGauss(0,0.1)”, which you can select and delete. What that
+does is add random noise to the pure tone signal.</p></li>
+<li><p>Compare the formula to the in the Formula field to the one above.
+Notice the similarities? The default formula has A = 1/2 and a frequency
+of 377Hz. You can change the frequency to anything you want, but for now
+let’s just work with the default. Name the object “377Hz.”</p></li>
+<li><p>This will put an object called “377Hz” in your Objects
+window.</p></li>
 </ol>
 <p align="center">
 <img src="images/obj_350.png" width="50%" height="50%">
@@ -436,9 +418,20 @@ This brings up the a window that looks like this:</li>
 <p><br />
 </p>
 <ol start="6" style="list-style-type: decimal">
-<li><p>Click “View and Edit”. This should bring up an viewing window that has two views: the top view is the waveform, and the bottom is the spectrogram (we’ll get to spectrograms soon)</p></li>
-<li><p>The waveform view doesn’t really look like a sine waveform like we’re used to seeing. That’s because it’s repeating itself 377 times per second and the window is showing 3 seconds (or 377 x 3) 1131 cycles. So, let’s zoom in to the waveform to see the individual contours of the waveform.</p></li>
-<li><p>Select a chunk of the image (using your mouse, click and drag). Along the top you’ll see a number associated with the selection. This number tells you how long the window of your selection is. Make a selection of roughly 300ms (or 0.300s). Then press the button “sel” at the bottom of the pane. You can also press Ctl-N to zoom in to your selection.</p></li>
+<li><p>Click “View and Edit”. This should bring up an viewing window
+that has two views: the top view is the waveform, and the bottom is the
+spectrogram (we’ll get to spectrograms soon)</p></li>
+<li><p>The waveform view doesn’t really look like a sine waveform like
+we’re used to seeing. That’s because it’s repeating itself 377 times per
+second and the window is showing 3 seconds (or 377 x 3) 1131 cycles. So,
+let’s zoom in to the waveform to see the individual contours of the
+waveform.</p></li>
+<li><p>Select a chunk of the image (using your mouse, click and drag).
+Along the top you’ll see a number associated with the selection. This
+number tells you how long the window of your selection is. Make a
+selection of roughly 300ms (or 0.300s). Then press the button “sel” at
+the bottom of the pane. You can also press Ctl-N to zoom in to your
+selection.</p></li>
 </ol>
 <p align="center">
 <img src="images/300ms_350Hz.png" width="75%" height="75%">
@@ -446,8 +439,14 @@ This brings up the a window that looks like this:</li>
 <p><br />
 </p>
 <ol start="9" style="list-style-type: decimal">
-<li><p>Notice you can start to see the waveform take shape. Look at the y-axis (amplitude) and notice that it goes from 0 to 0.5 (and -0.5), which was specified in our formula by “1/2”. So things are working as specified by the formula.</p></li>
-<li><p>Let’s confirm that our waveform is actually 377Hz Now select a smaller chunk of the wave form, something that gives you a few cycles of the sine wave. In the example below I selected about 12ms of the waveform.</p></li>
+<li><p>Notice you can start to see the waveform take shape. Look at the
+y-axis (amplitude) and notice that it goes from 0 to 0.5 (and -0.5),
+which was specified in our formula by “1/2”. So things are working as
+specified by the formula.</p></li>
+<li><p>Let’s confirm that our waveform is actually 377Hz Now select a
+smaller chunk of the wave form, something that gives you a few cycles of
+the sine wave. In the example below I selected about 12ms of the
+waveform.</p></li>
 </ol>
 <p align="center">
 <img src="images/12ms_350Hz.png" width="75%" height="75%">
@@ -455,28 +454,67 @@ This brings up the a window that looks like this:</li>
 <p><br />
 </p>
 <ol start="11" style="list-style-type: decimal">
-<li><p>Suppose you want to place the beginning of your cursor at the true starting point of a cycle. This would be the so-called “zero crossings” of the wave. The arrows in the example above are pointing the the onset and offset of one cycle of the wave, each at the zero crossing. You can get the cursor exactly at the zero crossing by going to Select &gt; “Move start of selection to nearest zero crossing”, and then do the same for the end of the selection.</p></li>
-<li><p>Can you confirm whether the synthesized tone is actually 377Hz? <span class="math inline">\(\rightarrow\)</span> remember, the frequency is the number of cycles per second.</p></li>
+<li><p>Suppose you want to place the beginning of your cursor at the
+true starting point of a cycle. This would be the so-called “zero
+crossings” of the wave. The arrows in the example above are pointing the
+the onset and offset of one cycle of the wave, each at the zero
+crossing. You can get the cursor exactly at the zero crossing by going
+to Select &gt; “Move start of selection to nearest zero crossing”, and
+then do the same for the end of the selection.</p></li>
+<li><p>Can you confirm whether the synthesized tone is actually 377Hz?
+<span class="math inline">\(\rightarrow\)</span> remember, the frequency
+is the number of cycles per second.</p></li>
 </ol>
 <div id="the-spectrum-view" class="section level3">
 <h3>The spectrum view</h3>
-<p>The waveform view is great for looking at the overall shape of a sound, examining the periodicity, etc. It’s more useful for complex sounds like speech than it is for pure tones, which are sortof boring and predictable (by definition). Recall the discussion from <a href="lecture2.html">Lecture 2</a> about the spectrum view, which represents the frequency components in a complex sound (periodic or aperiodic).</p>
+<p>The waveform view is great for looking at the overall shape of a
+sound, examining the periodicity, etc. It’s more useful for complex
+sounds like speech than it is for pure tones, which are sortof boring
+and predictable (by definition). Recall the discussion from <a
+href="lecture2.html">Lecture 2</a> about the spectrum view, which
+represents the frequency components in a complex sound (periodic or
+aperiodic).</p>
 <ol style="list-style-type: decimal">
-<li><p>The software can compute a Fourier analysis of the periodic sound and determine what the component frequencies are and present them in a spectrum view. Put your cursor at a zero crossing at the start of a cycle in your 377Hz wave. In your View and edit window go to Spectrum &gt; View spectral slice. Examine the Spectrum. Notice that it’s not a single line, like we saw in our earlier lectures, rather it’s a curve. Praat computes an estimated representation of the spectrum (i.e., not idealized), the peak of which corresponds to the frequency of the tone.</p></li>
-<li><p>The top image is the spectrum taken at a single point, and the bottom is a spectrum taken over the entire 3s of the wave:</p></li>
+<li><p>The software can compute a Fourier analysis of the periodic sound
+and determine what the component frequencies are and present them in a
+spectrum view. Put your cursor at a zero crossing at the start of a
+cycle in your 377Hz wave. In your View and edit window go to Spectrum
+&gt; View spectral slice. Examine the Spectrum. Notice that it’s not a
+single line, like we saw in our earlier lectures, rather it’s a curve.
+Praat computes an estimated representation of the spectrum (i.e., not
+idealized), the peak of which corresponds to the frequency of the
+tone.</p></li>
+<li><p>The top image is the spectrum taken at a single point, and the
+bottom is a spectrum taken over the entire 3s of the wave:</p></li>
 </ol>
 <p align="center">
-<img src="images/single_pt_spectrum.png" width="50%" height="50%"> <img src="images/entire_wave_spectrum.png" width="50%" height="50%">
+<img src="images/single_pt_spectrum.png" width="50%" height="50%">
+<img src="images/entire_wave_spectrum.png" width="50%" height="50%">
 </p>
 <p><br />
 </p>
-<p>Notice that in the bottom image the curve is skinnier with a sharp peak (centered at 377Hz). This is because the program had more “evidence” for the nature of the frequency. It’s basically computed the average frequency over 3s, while in the top image, it is only computing the frequency at a single point (which is the center of a 10ms window).</p>
+<p>Notice that in the bottom image the curve is skinnier with a sharp
+peak (centered at 377Hz). This is because the program had more
+“evidence” for the nature of the frequency. It’s basically computed the
+average frequency over 3s, while in the top image, it is only computing
+the frequency at a single point (which is the center of a 10ms
+window).</p>
 </div>
 <div id="printing-your-spectrum" class="section level3">
 <h3>Printing your spectrum</h3>
-<p>There are two windows in Praat: the objects window and the picture window. The picture window is where you can print your image and copy it and insert the file into a document. Let’s print the waveform and a spectrum in the picture window.</p>
+<p>There are two windows in Praat: the objects window and the picture
+window. The picture window is where you can print your image and copy it
+and insert the file into a document. Let’s print the waveform and a
+spectrum in the picture window.</p>
 <ol style="list-style-type: decimal">
-<li>You should have your “Sound 377Hz” in the objects list. Suppose you want to print the first 10ms of the waveform in the picture window. Select your sound, then Click “Draw” &gt; Draw from the button on the right side of the Objects window. This will bring up a window with some options. Here you can select how much of your sound you want printed. You can start at 0.0 and end at 10ms (or 0.01s). Leave all the other options unchanged, and this should be what your picture window looks like:</li>
+<li>You should have your “Sound 377Hz” in the objects list. Suppose you
+want to print the first 10ms of the waveform in the picture window.
+Select your sound, then Click “Draw” &gt; Draw from the button on the
+right side of the Objects window. This will bring up a window with some
+options. Here you can select how much of your sound you want printed.
+You can start at 0.0 and end at 10ms (or 0.01s). Leave all the other
+options unchanged, and this should be what your picture window looks
+like:</li>
 </ol>
 <p align="center">
 <img src="images/picture_window_waveform.png" width="75%" height="75%">
@@ -484,25 +522,41 @@ This brings up the a window that looks like this:</li>
 <p><br />
 </p>
 <ol start="2" style="list-style-type: decimal">
-<li>You can save this picture as a PDF or as a PNG file, which you can insert into your word processing document (like MS Word or Google Sheets). Now erase the picture field by clicking Edit &gt; Erase all from the picture window. Print your spectral slice (there should be a spectrum object in your objects window).</li>
+<li>You can save this picture as a PDF or as a PNG file, which you can
+insert into your word processing document (like MS Word or Google
+Sheets). Now erase the picture field by clicking Edit &gt; Erase all
+from the picture window. Print your spectral slice (there should be a
+spectrum object in your objects window).</li>
 </ol>
 </div>
 </div>
 <div id="synthesizing-a-complex-periodic-wave" class="section level2">
 <h2>Synthesizing a complex periodic wave</h2>
-<p>Rememeber that a complex periodic tone is the sum of multiple pure tones that are related. Let’s make a complex periodic wave!</p>
+<p>Rememeber that a complex periodic tone is the sum of multiple pure
+tones that are related. Let’s make a complex periodic wave!</p>
 <ol style="list-style-type: decimal">
-<li>Go back to New &gt; Sound &gt; Create sound from formula. Create a 50ms complex wave with a fundamental frequency of 200Hz and two higher harmonics, H2=400Hz and H3=600Hz. For all three harmonics, make sure the amplitude is 1. The way to do this is to simply add sine formula above three times, changing the frequency for each harmonic. The resulting waveform should look like this (from the picture window):</li>
+<li>Go back to New &gt; Sound &gt; Create sound from formula. Create a
+50ms complex wave with a fundamental frequency of 200Hz and two higher
+harmonics, H2=400Hz and H3=600Hz. For all three harmonics, make sure the
+amplitude is 1. The way to do this is to simply add sine formula above
+three times, changing the frequency for each harmonic. The resulting
+waveform should look like this (from the picture window):</li>
 </ol>
 <p align="center">
 <img src="images/complex_200.png" width="75%" height="75%">
 </p>
 <p><br />
 </p>
-<p>Oila! It looks like the wave has 10 periods in 0.05s, so 10/0.05 = 200Hz! So if you play this sound, it will sound complex, but it will have the same pitch of a pure 200Hz tone.</p>
+<p>Oila! It looks like the wave has 10 periods in 0.05s, so 10/0.05 =
+200Hz! So if you play this sound, it will sound complex, but it will
+have the same pitch of a pure 200Hz tone.</p>
 <div id="phone-exercise" class="section level3">
 <h3>Phone exercise</h3>
-<p>Old-school phones (remember those) would make sounds when you depressed a key on the number pad. The tone produced would tell the phone exchange what the number was. In this exercise we’ll synthesize your phone number! Examine this chart. Each number is represented by the addition of two pure tones, resulting in a complex tone.</p>
+<p>Old-school phones (remember those) would make sounds when you
+depressed a key on the number pad. The tone produced would tell the
+phone exchange what the number was. In this exercise we’ll synthesize
+your phone number! Examine this chart. Each number is represented by the
+addition of two pure tones, resulting in a complex tone.</p>
 <p align="center">
 <img src="images/phone_nums.png" width="75%" height="75%">
 </p>
@@ -510,9 +564,17 @@ This brings up the a window that looks like this:</li>
 </p>
 <ol style="list-style-type: decimal">
 <li><p>Synthesize your phone number, with each tone being 0.5s.</p></li>
-<li><p>Name each complex tone as its number, which will appear in the objects list. Make sure you do them in the right order!</p></li>
-<li><p>Once you’ve synthesized all seven numbers (you dont need to do you area code), select all of them from the list then click “Combine” from the buttons on the right, then “Concatenate”. This will create one sound file with all the numbers in order.</p></li>
-<li><p>Click “Play” and there you have it. It won’t sound too natural as there aren’t any pauses between the numbers. Can you figure out how to include pauses? (Hint: synthesize a sound from formula, what’s the formula for silence? <span class="math inline">\(\rightarrow\)</span> 0)</p></li>
+<li><p>Name each complex tone as its number, which will appear in the
+objects list. Make sure you do them in the right order!</p></li>
+<li><p>Once you’ve synthesized all seven numbers (you dont need to do
+you area code), select all of them from the list then click “Combine”
+from the buttons on the right, then “Concatenate”. This will create one
+sound file with all the numbers in order.</p></li>
+<li><p>Click “Play” and there you have it. It won’t sound too natural as
+there aren’t any pauses between the numbers. Can you figure out how to
+include pauses? (Hint: synthesize a sound from formula, what’s the
+formula for silence? <span class="math inline">\(\rightarrow\)</span>
+0)</p></li>
 </ol>
 </div>
 </div>

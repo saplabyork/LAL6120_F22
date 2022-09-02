@@ -32,6 +32,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -245,7 +247,7 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="lecture1.html">Lecture 1</a>
+  <a href="LAL6120syllabus.html">Syllabus/Schedule</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -460,18 +462,20 @@ certificate.</p>
 <p>Homework assignments will primarily aim to develop skills in acoustic
 analysis, and will involve the analysis of prepared data. Submission of
 assignments will be via eClass.</p>
-<p>###Article presentations Each student will present two papers during
-the term. Paper 1 (Week 5): presentation of one short paper from JASA
-(Journal of the Acoustical Society of America) or Journal of Phonetics
-(or similar) on the analysis of VOT or vowel formants. Paper 2 (Weeks
-7-10): presentation of one paper on a topic your choice, pre-approved by
-me at least one week before your presentation. When presenting your
-papers, you are asked to (a) thoroughly read the paper and prepare a
-summary for the class using powerpoint slides or a handout, (b) provide
-a critical analysis of the paper (identifying both strengths and
-weaknesses), and (c) provide an overall assessment of the paper,
-thinking about directions/questions for future research and questions to
-generate class discussion.</p>
+</div>
+<div id="article-presentations" class="section level3">
+<h3>Article presentations</h3>
+<p>Each student will present two papers during the term. Paper 1 (Week
+5): presentation of one short paper from JASA (Journal of the Acoustical
+Society of America) or Journal of Phonetics (or similar) on the analysis
+of VOT or vowel formants. Paper 2 (Weeks 7-10): presentation of one
+paper on a topic your choice, pre-approved by me at least one week
+before your presentation. When presenting your papers, you are asked to
+(a) thoroughly read the paper and prepare a summary for the class using
+powerpoint slides or a handout, (b) provide a critical analysis of the
+paper (identifying both strengths and weaknesses), and (c) provide an
+overall assessment of the paper, thinking about directions/questions for
+future research and questions to generate class discussion.</p>
 </div>
 <div id="midterm-project" class="section level3">
 <h3>Midterm project</h3>
@@ -528,9 +532,7 @@ penalties.</p>
 </div>
 <div id="schedule" class="section level2">
 <h2>Schedule</h2>
-<pre class="r"><code>schedule &lt;-read.csv(&quot;schedule.csv&quot;, header =TRUE)
-kable(schedule, &quot;html&quot;)</code></pre>
-<table>
+<table class=" lightable-material lightable-striped lightable-hover" style='font-family: "Source Sans Pro", helvetica, sans-serif; margin-left: auto; margin-right: auto;'>
 <thead>
 <tr>
 <th style="text-align:right;">
@@ -560,7 +562,8 @@ Sep.7
 </td>
 <td style="text-align:left;">
 Intro to the course; Acoustics basics; Installing <a
-href="http://www.praat.org">Praat</a> and R
+href="http://www.praat.org">Praat</a> and <a
+href="https://www.rstudio.com/products/rstudio/download/#download">R</a>
 </td>
 <td style="text-align:left;">
 </td>
@@ -575,14 +578,14 @@ href="http://www.praat.org">Praat</a> and R
 Sep.14
 </td>
 <td style="text-align:left;">
-VOT 1; Working with Praat
+VOT; Working with Praat
 </td>
 <td style="text-align:left;">
-Lisker &amp; Abramson (1964)
+<a href="papers/lisker1964.pdf">Lisker &amp; Abramson (1964)</a>
 </td>
 <td style="text-align:left;">
-A
-</td>
+<ul>
+<li></td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -595,10 +598,10 @@ Sep.21
 VOT 2: R basics
 </td>
 <td style="text-align:left;">
-Cho &amp; Ladefoged
+<a href="papers/cho2019.pdf">Cho et al.(2019)</a>
 </td>
 <td style="text-align:left;">
-B
+TCPS tutorial certificates
 </td>
 </tr>
 <tr>
@@ -612,9 +615,10 @@ Sep.28
 Vowels
 </td>
 <td style="text-align:left;">
+<a href="papers/hillenbrand1995.pdf">Hillenbrand et al. (1995)</a>
 </td>
 <td style="text-align:left;">
-C
+VOT assignment
 </td>
 </tr>
 <tr>
@@ -628,7 +632,7 @@ Oct.5
 Fricatives; Basic analysis with R
 </td>
 <td style="text-align:left;">
-Jongman et al. 
+<a href="papers/jongman2000.pdf">Jongman et al.(2000)</a>
 </td>
 <td style="text-align:left;">
 D
@@ -636,7 +640,6 @@ D
 </tr>
 <tr>
 <td style="text-align:right;">
-NA
 </td>
 <td style="text-align:left;">
 Oct.12
@@ -663,7 +666,7 @@ Student paper presentations
 <td style="text-align:left;">
 </td>
 <td style="text-align:left;">
-G
+Paper presentations
 </td>
 </tr>
 <tr>
@@ -674,10 +677,10 @@ G
 Oct.26
 </td>
 <td style="text-align:left;">
-Nasals, Nasalization
+Nasalization
 </td>
 <td style="text-align:left;">
-Narayan
+<a href="papers/carignan2014.pdf">Carignan (2014)</a>
 </td>
 <td style="text-align:left;">
 H
@@ -694,6 +697,7 @@ Nov.2
 Coarticulation
 </td>
 <td style="text-align:left;">
+<a href="papers/beddor2009.pdf">Beddor (2009)</a>
 </td>
 <td style="text-align:left;">
 i
@@ -707,10 +711,10 @@ i
 Nov.9
 </td>
 <td style="text-align:left;">
-Tone
+Tonogenesis
 </td>
 <td style="text-align:left;">
-XXX
+<a href="papers/homert1979.pdf">Hombert et al. (1979)</a>
 </td>
 <td style="text-align:left;">
 J
@@ -724,10 +728,11 @@ J
 Nov.16
 </td>
 <td style="text-align:left;">
-Voice quality
+Acoustic salience
 </td>
 <td style="text-align:left;">
-XXX
+<a href="papers/Narayan2019a.pdf">Narayan (2019)</a>, <a
+href="papers/narayan2020.pdf">Narayan (2020)</a>
 </td>
 <td style="text-align:left;">
 K
@@ -741,10 +746,10 @@ K
 Nov.23
 </td>
 <td style="text-align:left;">
-XXX
+Sources of sound change
 </td>
 <td style="text-align:left;">
-XXX
+<a href="papers/ohala1993.pdf">Ohala (1993)</a>
 </td>
 <td style="text-align:left;">
 L
@@ -761,14 +766,14 @@ Nov.30
 Final project presetations
 </td>
 <td style="text-align:left;">
-XXX
 </td>
 <td style="text-align:left;">
 M
 </td>
 </tr>
 </tbody>
-</table>
+</table></li>
+</ul>
 </div>
 </div>
 
