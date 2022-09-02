@@ -352,20 +352,23 @@ div.tocify {
 <div id="software-installation" class="section level1">
 <h1>Software installation</h1>
 <p>This course introduces you to some basics of instrumental phonetic
-analysis. You will need the following two pieces of software: * Praat:
-Acoustic phonetic analysis software. It’s free and available <a
-href="http://www.praat.org">here</a>. Please download it and follow the
-installation instructions. * R Studio: R is a statistical analysis
-language and R Studio is the user interface which allows you to do a
-variety of things with data, like modeling and visualizing. We’ll just
-scratch the outermost surface of what R allows you to do. But first
-you’ll need to have the R software (R Studio sits on top of the basic R
-software!). Go <a href="https://cran.rstudio.com/">here</a> to first
-download R onto your machine. Then download R Studio for free <a
+analysis. You will need the following two pieces of software:</p>
+<ul>
+<li>Praat: Acoustic phonetic analysis software. It’s free and available
+<a href="http://www.praat.org">here</a>. Please download it and follow
+the installation instructions.</li>
+<li>R Studio: R is a statistical analysis language and R Studio is the
+user interface which allows you to do a variety of things with data,
+like modeling and visualizing. We’ll just scratch the outermost surface
+of what R allows you to do. But first you’ll need to have the R software
+(R Studio sits on top of the basic R software!). Go <a
+href="https://cran.rstudio.com/">here</a> to first download R onto your
+machine. Then download R Studio for free <a
 href="https://www.rstudio.com/products/rstudio/download/#download">here</a>.
 Here’s a nice <a
 href="https://www.youtube.com/watch?v=TFGYlKvQEQ4">video</a> that walks
-you through the process.</p>
+you through the process.</li>
+</ul>
 </div>
 <div id="acoustics-basics" class="section level1">
 <h1>Acoustics basics</h1>
@@ -907,6 +910,120 @@ Spectrum of aperiodic random noise
 </figure>
 <p><br />
 </p>
+</div>
+</div>
+<div id="the-myoelasticaerodynamic-theory-of-phonation"
+class="section level1">
+<h1>The myoelastic/aerodynamic theory of phonation</h1>
+<p>In our last lecture we noted the complexities involved in the
+movement of vocal folds given the highly variable nature of their
+composition as well as their elongation and position governed by
+muscular control of the arytenoids and associated muscles. The most
+widely accepted theory explaining the nature of vocal fold vibration or
+oscillation is called the <strong>myoelastic</strong> theory, which
+explains oscillation as the interaction between muscle forces
+(<em>myo-</em>), tissue elasticity, and air pressure flow.</p>
+<p>The myoelastic/aerodynamic theory of phonation was first described by
+the Dutch speech scientist <a
+href="https://en.wikipedia.org/wiki/Janwillem_van_den_Berg">van den
+Berg</a> in 1958. It basically states that vocal folds open up due to
+sub-glottal pressure and close due to elastic and aerodynamic pressures.
+But that’s too simplistic. Here are the specific steps:</p>
+<ol style="list-style-type: decimal">
+<li><p>Musicular activity causes the arytenoids so that the vocal
+processes come together thereby positioning the vocal folds close
+together (adduction)</p></li>
+<li><p>Sub-glottal pressure (air pressure below the vocal folds)
+increases until the vocal folds are forced apart.</p></li>
+<li><p>With narrow opening of the vocal folds (being pushed apart by the
+sub-glottal air pressure) escaping air travels fast (this is called the
+<em>Venturi tube effect</em>). The fast moving air through the narrow
+passage causes a momentary decrease in air pressure across the opening
+(this is called the <strong>Bernoulli effect</strong>)</p></li>
+</ol>
+<p align="center">
+<img src="images/bernoulli.jpg" width="40%" height="40%">
+</p>
+<p><br />
+</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>The decrease in pressure across the folds causes the folds to be
+sucked together (this is part of the Bernoulli effect you might be
+familiar with, it’s the reason why when you’re in the shower the curtain
+might be sucked in toward you or <em>lift</em> of airplane
+wings)</p></li>
+<li><p>The Bernoulli effect AND the myoelastic recoil forces of the
+vocal folds themselves cause adduction</p></li>
+<li><p>When fully adducted the process begins all over again with an
+increases in sub-glottal pressure. The process repeats resulting in
+phonation!</p></li>
+</ol>
+<p>In the image below, notice that inferior (“lower lip” in the picture)
+and superior (“upper lip”) aspects of the vocal folds adduct at
+different times. Initially the inferior aspect abducts and ultimately
+the superior aspect. Similarly, during abduction, the inferior aspect
+closes before the superior aspect.</p>
+<p align="center">
+<img src="images/myo.jpeg" width="40%" height="40%">
+</p>
+<p><br />
+</p>
+<div id="phonation-threshold" class="section level2">
+<h2>Phonation Threshold</h2>
+<p>Just how much sub-glottal pressure is required to pop open the
+adducted vocal folds? The minimum pressure required is called the
+<strong>phonation threshold pressure</strong> (PTP). The PTP varies
+proportionally with F<sub>0</sub>. With increasing F<sub>0</sub> so is
+PTP. For example, for low F<sub>0</sub>s PTP can be around 3cm
+H<sub>2</sub>0 and up to around 6cm H<sub>2</sub>0 at higher
+F<sub>0</sub>s.</p>
+</div>
+</div>
+<div id="spectrum-1" class="section level1">
+<h1>Spectrum</h1>
+<p>Phonation is the oscillation of the vocal folds back and forth, in a
+roughly periodic fashion. Like all of our discussion of complex periodic
+waves (like the complex wave resulting from plucking a string or blowing
+into a flute), there is a fundamental oscillation, and an infinite
+number of harmonics at frequencies systematically related to the
+fundamental. The resulting <strong>spectrum</strong>, in idealized form,
+would look like the line spectra seen in earlier lectures.</p>
+<p>The spectrum of harmonics produced by the oscillating vocal folds is
+called the <strong>glottal spectrum</strong>, which is unique for how
+the amplitude characteristics diminish with increasing frequency. This
+diminishing of amplitude is called the <strong>spectral
+slope</strong>.</p>
+<p align="center">
+<img src="images/sourcespec.png" width="30%" height="30%">
+</p>
+<p><br />
+</p>
+<p>The glottal spectrum has to be inferred from the sound coming out of
+a mouth, that is, we never get to hear exactly the sound of the vocal
+folds oscillating. When we synthesize the source spectrum, it often
+sounds like <a href="sounds/sourcespec.wav">blowing rasberries</a>, that
+is, it lacks the “shape” of a vowel sound, which is the filtered glottal
+spectrum through the oral and nasal cavities. The harmonic content of
+the glottal spectrum theoretically decreases by <strong>12dB per
+octave</strong>. What’s an <em>octave</em>? The name reveals that it has
+to do with ‘8’, or the eight musical notes that occupy the interval
+between a particular frequency and twice that frequency. So an octave
+higher than 220Hz will be 440Hz, and likewise, an octave below would be
+110Hz. So, for the glottal spectrum, the harmonic that is twice the
+fundamental will have an amplitude 12dB less than the fundamental.</p>
+<p>If the first harmonic (F0) is 200Hz with an amplitude of 36dB, the
+harmonic at 400Hz (H2) will have an amplitude of 24dB. The harmonic with
+800Hz (H4) will have an amplitude of 12dB, the harmonic at 1600Hz (H8)
+will have an amplitude of 0dB.</p>
+<div id="harmonic-spacing" class="section level2">
+<h2>Harmonic spacing</h2>
+<p>When the vocal folds elongate, via tilting the thyroid cartilage, so
+too does the <strong>harmonic spacing</strong> of the spectrum. Remember
+that the harmonics of a complex periodic wave are whole number multiples
+of the fundamental. So a 100Hz fundamental will have tighter spaced
+harmonics (100Hz), than a 200Hz fundamental. The spacing of the
+harmonics contribute to the timbre of the sound. This explains why kids
+sound different from adults, and not just higher pitched.</p>
 </div>
 </div>
 
