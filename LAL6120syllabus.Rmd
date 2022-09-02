@@ -72,7 +72,8 @@ Your grade in the course will be determined by your performance on the following
 
 All readings will be made available on the course [website](https://saplabyork.github.io/LAL6120_F22). Students may find these additional/recommended readings useful, though they are **not required** reading:
 
-> Johnson, K. (2011), *Acoustic and Auditory Phonetics* (Wiley) Winter, B. (2020), *Statistics for Linguists: An Introduction Using R* (Routledge)
+> Johnson, K. (2011), *Acoustic and Auditory Phonetics* (Wiley) 
+> Winter, B. (2020), *Statistics for Linguists: An Introduction Using R* (Routledge)
 
 ## eClass
 
