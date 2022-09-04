@@ -6,6 +6,6 @@ navbar:
       href: index.html
     - text: "Syllabus/Schedule"
       href: LAL6120syllabus.html
-    - text: "Week 1: Acoustics basics"
+    - text: "Week 1: Acoustics notes"
       href: acoustics_basics.html
 output_dir: "docs"

@@ -37,7 +37,9 @@ library(kableExtra)
 Wednesdays, 2:30pm, Calumet College, Rm.318\
 Instructor: [Chandan Narayan](https://ch-narayan.github.io)\
 Office hours: Tuesdays and Thursdays 10-11am [Zoom link](https://yorku.zoom.us/j/97755816919?pwd=L1krNjJlUm9TL2RWWE1HWnZwNXZLQT09)\
-Course website: \## Course Outline and Schedule
+Course website: [Eclass](https://eclass.yorku.ca)
+
+# **Course Outline and Schedule**
 
 ------------------------------------------------------------------------
 
@@ -81,7 +83,7 @@ I will be recording our in-class demos which will be made available via the [eCl
 
 ### Lecture notes
 
-Every week's discussion will be accompanied by [notes](%22docs/index.html%22). NARAYAN-XW726
+Every week's discussion will be accompanied by notes (appearing as tabs above)
 
 ### Annotated bibliography
 
