@@ -2,13 +2,13 @@
 1,Sep.7,Intro to the course; Acoustics basics; Installing [Praat](http://www.praat.org) and [R](https://www.rstudio.com/products/rstudio/download/#download),,
 2,Sep.14,VOT; Working with Praat,[Lisker & Abramson (1964)](papers/lisker1964.pdf),-
 3,Sep.21,VOT 2: R basics,[Cho et al.(2019)](papers/cho2019.pdf),TCPS tutorial certificates 
-4,Sep.28,Vowels,[Hillenbrand et al. (1995)](papers/hillenbrand1995.pdf),VOT assignment
-5,Oct.5,Fricatives; Basic analysis with R,[Jongman et al.(2000)](papers/jongman2000.pdf),D
-,Oct.12,Reading week-NO CLASS,,E
+4,Sep.28,Vowels,[Hillenbrand et al. (1995)](papers/hillenbrand1995.pdf),Assignment 1: VOT
+5,Oct.5,Fricatives; Basic analysis with R,[Jongman et al.(2000)](papers/jongman2000.pdf),
+,Oct.12,Reading week-NO CLASS,,
 6,Oct.19,Student paper presentations,,Paper presentations
-7,Oct.26,Nasalization,[Carignan (2014)](papers/carignan2014.pdf),H
-8,Nov.2,Coarticulation,[Beddor (2009)](papers/beddor2009.pdf),i
-9,Nov.9,Tonogenesis,[Hombert et al. (1979)](papers/homert1979.pdf),J
-10,Nov.16,Acoustic salience,"[Narayan (2019)](papers/Narayan2019a.pdf), [Narayan (2020)](papers/narayan2020.pdf)",K
-11,Nov.23,Sources of sound change,[Ohala (1993)](papers/ohala1993.pdf),L
-12,Nov.30,Final project presentations,,M
+7,Oct.26,Nasality,[Zellou (2014)](papers/zellou2014.pdf),
+8,Nov.2,Coarticulation,[Beddor (2009)](papers/beddor2009.pdf),
+9,Nov.9,Tonogenesis,[Hombert et al. (1979)](papers/homert1979.pdf),Assignment 2: Fricative COG analysis
+10,Nov.16,Acoustic salience,"[Narayan (2019)](papers/Narayan2019a.pdf), [Narayan (2020)](papers/narayan2020.pdf)",
+11,Nov.23,Sources of sound change,[Ohala (1993)](papers/ohala1993.pdf),
+12,Nov.30,Final project presentations,,
