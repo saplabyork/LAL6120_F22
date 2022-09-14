@@ -57,4 +57,4 @@ For the most part, two-category seems relatively uninteresting...except when we 
 
 ## Praat VOT measuring
 
-[Here](/sounds/praat/Ka1.wav)
+![Ka1](/sounds/praat/Ka1.wav)
