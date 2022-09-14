@@ -57,4 +57,5 @@ For the most part, two-category seems relatively uninteresting...except when we 
 
 ## Praat VOT measuring
 
-![Ka1](/sounds/praat/Ka1.wav)
+![ka-Hindi](/sounds/praat/Ka1.wav)
+![pa-Hindi](sounds/praat/pa1.wav)
