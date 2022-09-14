@@ -57,5 +57,16 @@ For the most part, two-category seems relatively uninteresting...except when we 
 
 ## Praat VOT measuring
 
-![ka-Hindi](sounds/praat/Ka1.wav)
+For each of these sound files, measure the VOT and put it in a spreadsheet. Find the mean for each place of articulation. Can you make some generalizations?
+
+pa-ta (ret) -ka from Hindi
+
 ![pa-Hindi](sounds/praat/pa1.wav)
+![Ta-Hindi](sounds/praat/ta1.wav)
+![ka-Hindi](sounds/praat/Ka1.wav)
+
+pa-ta (dental)-ka from Mandarin
+
+![pa-Mandarin](sounds/praat/manPa1.wav)
+![ta-Mandarin](sounds/praat/manTa1.wav)
+![ka-Mandarin](sounds/praat/manKa1.wav)
