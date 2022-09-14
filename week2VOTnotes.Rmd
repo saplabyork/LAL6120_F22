@@ -43,3 +43,18 @@ Interesting phenomenon --> **covariation** between voicing and aspiration, which
   <img width=50% height=50% src="images/lisker_VOT.png">
 </p>
 
+## Categories of VOT according to LA
+
+* Two-category: AmEn, Cantonese, Dutch, Hungarian, (Carib) Spanish, Tamil
+* Three-category: Korean, Armenian, Thai
+* Four-category: Hindi, Marathi (both Indic languages)
+
+For the most part, two-category seems relatively uninteresting...except when we look at where the VOT is dimension is divided. Let's look at AmEn vs. Dutch (two closely related languages)
+
+<p align="center">
+  <img width=50% height=50% src="images/dutchVOT.png"><img width=50% height=50% src="images/englishVOT.png">
+</p>
+
+## Praat VOT measuring
+
+[Here](sounds/praat/)
