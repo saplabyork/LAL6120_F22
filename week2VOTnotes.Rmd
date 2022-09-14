@@ -55,6 +55,12 @@ For the most part, two-category seems relatively uninteresting...except when we 
   <img width=50% height=50% src="images/dutchVOT.png"><img width=50% height=50% src="images/englishVOT.png">
 </p>
 
+Now let's examine the labial place across languages:
+
+<p align="center">
+  <img width=50% height=50% src="images/vot_hist_p.png">
+</p>
+
 ## Praat VOT measuring
 
 For each of these sound files, measure the VOT and put it in a spreadsheet. Find the mean for each place of articulation. Can you make some generalizations?
