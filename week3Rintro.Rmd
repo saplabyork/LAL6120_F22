@@ -1,0 +1,47 @@
+---
+title: 'Week 3: R notes'
+author: 
+date: 
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Reading in data using "base R"
+
+Base R refers to all of the operations and functions that come built in to your R session without loading any *libraries*. Let's read in some data. Suppose you've made your measurements of lots of sounds and you've saved them in Excel (or some other spreadsheet program). It's really good practice to save the data as a ".csv" file or *comma-separated values*. This is a format that is easily readable by R. (You can read in .xls files as well but let's keep it software neutral for the moment). 
+
+Your R Studio session should be divided into different windows. Locate the "Script" window. If you don't see it, go to the "plus" icon at the top and select "New script". This should open a window. It is here where you will put all of your commands.
+
+You can input your commands directly at the command prompt ">" but it's good practice to see what you've done. If you save it in a script then it's always there and theoretically always reproducible. 
+
+First you need some data. I have uploaded a .csv file [here](tam.csv)
+
+```{r}
+library(tidyverse)
+remotes::install_github("joeystanley/joeysvowels", force = TRUE)
+library(joeysvowels)
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+
+data(darla)
+ggplot(darla, aes(F2, F1, color = vowel)) + 
+  geom_point() + 
+  scale_x_reverse() + 
+  scale_y_reverse()
+
+data(coronals)
+avg_trajs <- coronals %>%
+  group_by(vowel, percent) %>%
+  summarize(across(c(F1, F2), mean)) %>%
+  print()
+ggplot(avg_trajs, aes(F2, F1, color = vowel)) + 
+  geom_path(aes(group = vowel), 
+            arrow = arrow(angle = 20, length = unit(0.15, "in"), type = "closed")) + 
+  scale_x_reverse() + 
+  scale_y_reverse()
+```
+

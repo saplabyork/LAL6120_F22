@@ -10,4 +10,6 @@ navbar:
       href: acoustics_basics.html
     - text: "Week 2: VOT notes"
       href: week2VOTnotes.html
+    - text: "Week 3: R intro"
+      href: week3Rintro.html
 output_dir: "docs"
